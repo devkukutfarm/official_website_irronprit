@@ -1,0 +1,21 @@
+{
+  "name": "IRONPRIT Fitness",
+  "short_name": "IRONPRIT",
+  "description": "Professional gym in Baruipur, West Bengal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#052a21",
+  "theme_color": "#052a21",
+  "icons": [
+    {
+      "src": "/images/Inner-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Inner-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,18 +1,18 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import FaqAccordion from '@/components/ui/FaqAccordion'
 import { classesList } from '@/lib/data/classes'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Classes | IRONPRIT Fitness',
+  title: 'Classes',
   description:
-    'Strength training, cardio, HIIT, yoga, zumba and personal training — six structured classes designed for every fitness goal at IRONPRIT Baruipur.',
+    'Strength training, cardio, HIIT, yoga, zumba and personal training â€” six structured classes designed for every fitness goal at IRONPRIT Baruipur.',
 }
 
 const classFaqs = [
   {
     q: 'Do I need to book a class in advance?',
-    a: 'Group classes do not require advance booking — just show up at the scheduled time. Personal Training sessions must be booked in advance via WhatsApp.',
+    a: 'Group classes do not require advance booking â€” just show up at the scheduled time. Personal Training sessions must be booked in advance via WhatsApp.',
   },
   {
     q: 'Are classes suitable for beginners?',
@@ -31,7 +31,7 @@ const classFaqs = [
 export default function ClassesPage() {
   return (
     <>
-      {/* ── Hero ── */}
+      {/* â”€â”€ Hero â”€â”€ */}
       <section className="classes-hero">
         <div className="container">
           <p className="eyebrow">What we offer</p>
@@ -41,13 +41,13 @@ export default function ClassesPage() {
             <span className="accent">EVERY GOAL</span>
           </h1>
           <p className="lead" style={{ marginTop: 16 }}>
-            Six structured classes covering every angle of fitness — strength, conditioning,
+            Six structured classes covering every angle of fitness â€” strength, conditioning,
             mobility, and everything in between. All included in your membership.
           </p>
         </div>
       </section>
 
-      {/* ── Grid ── */}
+      {/* â”€â”€ Grid â”€â”€ */}
       <section className="classes-grid-wrap">
         <div className="container">
           <div className="classes-grid">
@@ -68,7 +68,7 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      {/* ── Join CTA ── */}
+      {/* â”€â”€ Join CTA â”€â”€ */}
       <section className="classes-join">
         <div className="container">
           <p className="eyebrow">Start today</p>
@@ -78,7 +78,7 @@ export default function ClassesPage() {
             <span className="accent">BEGIN?</span>
           </h2>
           <p className="lead">
-            Walk in for a free trial session — pick any class and meet our coaches. No
+            Walk in for a free trial session â€” pick any class and meet our coaches. No
             commitment required.
           </p>
           <div className="actions" style={{ justifyContent: 'center', marginTop: 28 }}>
@@ -86,7 +86,7 @@ export default function ClassesPage() {
               View Plans
             </Link>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-dark"
@@ -97,16 +97,16 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      {/* ── Price teaser ── */}
+      {/* â”€â”€ Price teaser â”€â”€ */}
       <section className="classes-teaser">
         <div className="container">
           <p className="eyebrow">Plans from</p>
           <div className="teaser-grid">
             {[
-              { label: 'Monthly', price: '₹999', featured: false },
-              { label: 'Quarterly', price: '₹2,799', featured: false },
-              { label: 'Half Yearly', price: '₹4,999', featured: true },
-              { label: 'Annual', price: '₹8,999', featured: false },
+              { label: 'Monthly', price: 'â‚¹999', featured: false },
+              { label: 'Quarterly', price: 'â‚¹2,799', featured: false },
+              { label: 'Half Yearly', price: 'â‚¹4,999', featured: true },
+              { label: 'Annual', price: 'â‚¹8,999', featured: false },
             ].map((p) => (
               <Link key={p.label} href="/packages" className={p.featured ? 'is-featured' : ''}>
                 <small>{p.label}</small>
@@ -117,7 +117,7 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      {/* ── FAQ ── */}
+      {/* â”€â”€ FAQ â”€â”€ */}
       <section className="faq">
         <div className="container">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>Common questions</p>
@@ -130,3 +130,4 @@ export default function ClassesPage() {
     </>
   )
 }
+

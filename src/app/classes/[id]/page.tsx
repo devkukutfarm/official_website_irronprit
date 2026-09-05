@@ -150,7 +150,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
                   View Plans
                 </Link>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919903475355"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-dark"

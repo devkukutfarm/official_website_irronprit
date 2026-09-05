@@ -5,7 +5,7 @@ import CertGrid from '@/components/ui/CertGrid'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | IRONPRIT Fitness',
+  title: 'About Us',
   description:
     'IRONPRIT Fitness was built on the belief that real transformation comes through proper training and consistency. Meet our founder and learn our story.',
 }

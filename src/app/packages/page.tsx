@@ -2,68 +2,60 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Packages & Pricing | IRONPRIT Fitness',
+  title: 'Packages & Pricing',
   description:
-    'Flexible gym membership plans at IRONPRIT Fitness Baruipur. Monthly, quarterly, half-yearly and annual plans with couple and referral offers. No joining fee.',
+    'IRONPRIT membership plans — 1, 3, 6 and 12 months with up to 50% off and zero admission fee. Couple & referral offers available.',
 }
 
 const plans = [
   {
-    name: 'Monthly',
-    old: '₹1,400',
-    now: '₹999',
-    period: '/month',
+    name: '1 Month Pro',
+    old: '₹3,500',
+    now: '₹1,999',
     featured: false,
+    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%201%20Month%20Pro%20package%20(Rs%201999).',
     features: [
-      'All group classes',
-      'Locker facility',
-      'Progress tracking',
-      '1 diet guidance session',
-      'Free trial included',
+      'Gym floor access',
+      'Premium gym shaker',
+      'Zero admission fee',
     ],
   },
   {
-    name: 'Quarterly',
-    old: '₹3,900',
-    now: '₹2,799',
-    period: '/3 months',
+    name: '3 Months Elite',
+    old: '₹8,000',
+    now: '₹3,999',
     featured: false,
+    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%203%20Months%20Elite%20package%20(Rs%203999).',
     features: [
-      'All group classes',
-      'Locker facility',
-      'Progress tracking',
-      '1 diet guidance session',
-      '1 personal training session',
+      'Gym towel',
+      '1 steam bath session',
+      'Zero admission fee',
     ],
   },
   {
-    name: 'Half Yearly',
-    old: '₹7,200',
-    now: '₹4,999',
-    period: '/6 months',
+    name: '6 Months Supreme',
+    old: '₹14,500',
+    now: '₹6,998',
     featured: true,
+    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%206%20Months%20Supreme%20package%20(Rs%206998).',
     features: [
-      'All group classes',
-      'Locker facility',
-      'Progress tracking',
-      'Monthly diet guidance',
-      '3 personal training sessions',
-      '1 month FREE bonus',
+      'Towel & premium shaker',
+      '2 steam bath sessions',
+      '2 yoga sessions / week',
+      '3-day trial pass',
     ],
   },
   {
-    name: 'Annual',
-    old: '₹13,200',
-    now: '₹8,999',
-    period: '/year',
+    name: '12 Months Ultimate',
+    old: '₹26,500',
+    now: '₹12,999',
     featured: false,
+    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%2012%20Months%20Ultimate%20package%20(Rs%2012999).',
     features: [
-      'All group classes',
-      'Locker facility',
-      'Progress tracking',
-      'Unlimited diet guidance',
-      '6 personal training sessions',
-      '2 months FREE bonus',
+      'Premium gym bag & essentials',
+      '2 yoga + 1 Zumba / week',
+      '5 steam baths / month',
+      '5-day friend trial pass',
     ],
   },
 ]
@@ -74,36 +66,18 @@ export default function PackagesPage() {
       {/* ── Hero ── */}
       <section className="about-hero pkg-hero">
         <div className="about-hero-copy">
-          <p className="eyebrow" style={{ color: 'var(--gold)' }}>Membership plans</p>
+          <p className="eyebrow">Membership</p>
           <h1 className="display" style={{ color: 'var(--white)' }}>
-            SIMPLE,
-            <br />
-            HONEST
-            <br />
-            <span style={{ color: 'var(--gold)' }}>PRICING</span>
+            Be physically
+            <br />fit. Join
+            <br />today.
           </h1>
-          <p style={{ color: 'rgba(255,255,255,.78)', marginTop: 22, maxWidth: 440 }}>
-            No hidden fees, no joining charges, no pressure. Just pick the plan that fits your
-            life and start training.
-          </p>
-          <div className="actions" style={{ marginTop: 32 }}>
-            <a href="#plans" className="btn">
-              See Plans
-            </a>
-            <a
-              href="https://wa.me/919876543210"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-ghost"
-            >
-              Ask a Question
-            </a>
-          </div>
         </div>
         <div className="about-hero-media">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/african-bodybuilder-exercising-with-dumbbells-PYYBBGT.jpg"
-            alt="Training at IRONPRIT"
+            src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/portrait-of-female-boxer-2021-04-02-20-48-34-utc.jpg"
+            alt="Athlete training at IRONPRIT"
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 28 }}
           />
         </div>
@@ -112,102 +86,91 @@ export default function PackagesPage() {
       {/* ── Intro ── */}
       <section className="pkg-intro" id="plans">
         <div className="container">
-          <p className="eyebrow">Our plans</p>
           <h2 className="display">
-            CHOOSE YOUR
-            <br />
-            <em>MEMBERSHIP</em>
+            Choose the plan
+            <br />that matches your <em>commitment</em>
           </h2>
           <p>
-            Every plan includes all group classes — Strength, Cardio, HIIT, Yoga and Zumba. No
-            extra cost, no surprises.
+            Long-term packages include zero admission fee and up to 50% off. Monthly members also
+            get zero admission fee.
           </p>
-
-          <div className="promo-strip" style={{ marginTop: 28 }}>
-            <strong>Current Offer:</strong> Get 1 month FREE on 6-month plans &amp; 2 months FREE on
-            annual plans. <strong>Couple Discount: 15% off</strong> when joining together.
+          <div className="promo-strip">
+            Flat <strong>50% OFF</strong> + <strong>Zero Admission Fee</strong> on quarterly,
+            half-yearly and yearly plans.
           </div>
         </div>
       </section>
 
       {/* ── Plans grid ── */}
-      <section className="pkg-pricing">
+      <section className="pricing pkg-pricing">
         <div className="container">
           <div className="price-grid">
             {plans.map((plan) => (
-              <div key={plan.name} className={`price-card${plan.featured ? ' featured' : ''}`}>
+              <article key={plan.name} className={`price-card${plan.featured ? ' featured' : ''}`}>
                 <h3>{plan.name}</h3>
-                <p className="price-old">{plan.old}</p>
-                <div className="price-now">
-                  {plan.now}
-                  <span style={{ fontSize: 16, fontWeight: 500, opacity: 0.7 }}>
-                    {plan.period}
-                  </span>
-                </div>
-                <ul style={{ marginBottom: 22 }}>
+                <div className="price-old">{plan.old}</div>
+                <div className="price-now">{plan.now}</div>
+                <ul>
                   {plan.features.map((f) => (
                     <li key={f}>
-                      <i className="fa-solid fa-circle-check" />
+                      <i className="fa-solid fa-check" />
                       {f}
                     </li>
                   ))}
                 </ul>
                 <a
-                  href="https://forms.gle/YOUR_ENROLLMENT_FORM"
+                  href={`https://wa.me/919903475355?text=${plan.waMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`btn${plan.featured ? '' : ' btn-dark'}`}
+                  className="btn"
                   style={{ marginTop: 'auto' }}
                 >
-                  Enroll Now
+                  Join this plan
                 </a>
-              </div>
+              </article>
             ))}
           </div>
 
           {/* Offers */}
           <div className="offer-row">
-            <div className="offer-box offer-refer">
-              <span className="offer-label">Referral Offer</span>
-              <div className="offer-icon">
-                <i className="fa-solid fa-people-group" />
-              </div>
-              <h3>Refer a Friend</h3>
+            <article className="offer-box offer-refer">
+              <span className="offer-icon" aria-hidden="true">
+                <i className="fa-solid fa-gift" />
+              </span>
+              <span className="offer-label">Referral reward</span>
+              <h3>Bring a friend</h3>
               <p>
-                Bring a friend who joins any plan and both of you get{' '}
-                <strong>₹500 off your next renewal</strong>. No limit on how many friends you
-                refer.
+                Refer a friend and get <strong>1 month free</strong> +{' '}
+                <strong>20% off</strong> on any package.
               </p>
               <a
-                href="https://wa.me/919876543210"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-dark"
-                style={{ alignSelf: 'flex-start' }}
-              >
-                Claim Offer
-              </a>
-            </div>
-            <div className="offer-box offer-couple">
-              <span className="offer-label">Couple Offer</span>
-              <div className="offer-icon" style={{ background: 'var(--gold)' }}>
-                <i className="fa-solid fa-heart" />
-              </div>
-              <h3>Train Together</h3>
-              <p>
-                Couples who join together get{' '}
-                <strong>15% off on any plan</strong>. Because the couple that trains together,
-                stays together.
-              </p>
-              <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20to%20claim%20the%20referral%20offer."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"
               >
-                Get the Deal
+                Claim on WhatsApp
               </a>
-            </div>
+            </article>
+            <article className="offer-box offer-couple">
+              <span className="offer-icon" aria-hidden="true">
+                <i className="fa-solid fa-heart" />
+              </span>
+              <span className="offer-label">Couple / Dual</span>
+              <h3>Train together</h3>
+              <p>
+                <strong>10% off</strong> on monthly, quarterly and half-yearly. Yearly together at
+                a flat <strong>₹18,999</strong>.
+              </p>
+              <a
+                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20the%20couple%20%2F%20dual%20offer."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                Ask for couple rate
+              </a>
+            </article>
           </div>
         </div>
       </section>
@@ -215,44 +178,22 @@ export default function PackagesPage() {
       {/* ── Personal Training ── */}
       <section className="pkg-pt">
         <div className="container">
-          <p className="eyebrow">Need more focus?</p>
+          <p className="eyebrow">Personal training</p>
           <h2 className="display">
-            PERSONAL
-            <br />
-            <span className="accent">TRAINING</span>
+            Coaching with
+            <br />direction
           </h2>
-          <p className="lead" style={{ margin: '0 auto 28px' }}>
-            One-to-one sessions with your coach — custom plan, form correction and full
-            accountability.
+          <p className="lead">
+            Standard, Exclusive and Special Population PT are available, plus diet consultancy. We
+            do not list PT rates here yet — message us and we will match a plan to your goal.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 20, maxWidth: 880, margin: '0 auto 32px' }}>
-            {[
-              { title: 'Standard PT', desc: 'Great for goal-focused individuals looking for a personalised plan.' },
-              { title: 'Exclusive PT', desc: 'Priority time slots, dedicated trainer and intensive programming.' },
-              { title: 'Special Population', desc: 'Tailored for seniors, post-injury, prenatal or medical conditions.' },
-              { title: 'Diet Consultancy', desc: 'Standalone nutrition sessions — no gym membership required.' },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{ background: '#fff', borderRadius: 20, padding: '24px 22px', boxShadow: 'var(--shadow)' }}
-              >
-                <h3 style={{
-                  margin: '0 0 10px', fontFamily: 'var(--display)', fontStyle: 'italic',
-                  textTransform: 'uppercase', fontSize: 22, color: 'var(--red)',
-                }}>
-                  {item.title}
-                </h3>
-                <p style={{ margin: 0, color: 'var(--muted)' }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
           <a
-            href="https://forms.gle/YOUR_PT_ENQUIRY_FORM"
+            href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20personal%20training%20details."
             target="_blank"
             rel="noopener noreferrer"
             className="btn"
           >
-            Enquire About PT
+            Ask for PT pricing
           </a>
         </div>
       </section>
@@ -260,48 +201,38 @@ export default function PackagesPage() {
       {/* ── Standard ── */}
       <section className="standard">
         <div className="container">
-          <p className="eyebrow">Our promise</p>
-          <h2 className="display" style={{ color: 'var(--white)', marginBottom: 18 }}>
-            THE IRONPRIT STANDARD
-          </h2>
+          <p className="eyebrow">The IRONPRIT Standard</p>
           <ul>
-            {['No Hidden Fees', 'No Joining Charges', 'Flexible Plans', 'Cancel Anytime*', 'Real Coaches'].map((s) => (
-              <li key={s}>{s}</li>
-            ))}
+            <li>No shortcuts.</li>
+            <li>No false promises.</li>
+            <li>No compromise on quality.</li>
           </ul>
-          <p style={{ color: 'rgba(255,255,255,.78)', maxWidth: 620, margin: '0 auto 8px' }}>
-            We believe fitness should be affordable and accessible. Our pricing reflects that.
-          </p>
-          <p style={{ color: 'rgba(255,255,255,.5)', fontSize: 13 }}>
-            * Subject to membership terms. Contact us for details.
+          <p className="standard-lines">
+            Train with purpose. Stay disciplined. Keep progressing.
           </p>
         </div>
       </section>
 
       {/* ── CTA ── */}
-      <section className="mid-cta">
+      <section className="about-cta">
         <div className="container">
-          <p className="eyebrow">Ready to start?</p>
+          <p className="eyebrow">Your journey starts here</p>
           <h2 className="display">
-            TAKE THE
-            <br />
-            <span className="accent">FIRST STEP</span>
+            Are you ready
+            <br />to become stronger?
           </h2>
-          <p className="lead" style={{ margin: '0 auto' }}>
-            Walk in for a free session first — then decide. No pressure, no commitment.
-          </p>
-          <div className="actions" style={{ justifyContent: 'center', marginTop: 28 }}>
+          <div className="actions">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20am%20ready%20to%20join."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn"
+              className="btn btn-dark"
             >
-              <i className="fa-brands fa-whatsapp" /> Book Free Trial
+              Join IRONPRIT
             </a>
-            <Link href="/contact" className="btn btn-dark">
-              Visit Us
-            </Link>
+            <a href="tel:+919903475355" className="btn btn-ghost">
+              Call 9903475355
+            </a>
           </div>
         </div>
       </section>

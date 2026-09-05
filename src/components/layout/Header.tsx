@@ -59,7 +59,7 @@ export default function Header() {
           <div className="header-actions">
             <div className="header-phone">
               <span>Call us</span>
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919903475355">9903475355</a>
             </div>
             <Link href="/packages" className="btn btn-dark">
               Join Now

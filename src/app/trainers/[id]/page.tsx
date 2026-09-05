@@ -56,7 +56,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
           </p>
           <div className="actions" style={{ marginTop: 32 }}>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
@@ -205,7 +205,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
               View Plans
             </Link>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost"

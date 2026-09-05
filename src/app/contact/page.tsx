@@ -1,8 +1,8 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | IRONPRIT Fitness',
+  title: 'Contact Us',
   description:
     'Find IRONPRIT Fitness in Baruipur, West Bengal. Get directions, call us or drop us a message on WhatsApp.',
 }
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* ── Hero ── */}
+      {/* â”€â”€ Hero â”€â”€ */}
       <section className="about-hero" style={{ background: 'var(--green)' }}>
         <div className="about-hero-copy">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>Get in touch</p>
@@ -22,19 +22,19 @@ export default function ContactPage() {
             FITNESS
           </h1>
           <p style={{ color: 'rgba(255,255,255,.78)', marginTop: 22, maxWidth: 440 }}>
-            We are in Baruipur, West Bengal. Come in for a free session or reach out on WhatsApp —
+            We are in Baruipur, West Bengal. Come in for a free session or reach out on WhatsApp â€”
             we reply fast.
           </p>
           <div className="actions" style={{ marginTop: 32 }}>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
             >
               <i className="fa-brands fa-whatsapp" /> WhatsApp Us
             </a>
-            <a href="tel:+919876543210" className="btn btn-ghost">
+            <a href="tel:+919903475355" className="btn btn-ghost">
               Call Now
             </a>
           </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Branch info ── */}
+      {/* â”€â”€ Branch info â”€â”€ */}
       <section className="contact-branches">
         <div className="container">
           <p className="eyebrow">Our location</p>
@@ -60,13 +60,13 @@ export default function ContactPage() {
               <i className="fa-solid fa-location-dot" style={{ color: 'var(--gold)', fontSize: 28 }} />
               <h3>IRONPRIT Fitness</h3>
               <p>
-                Baruipur, South 24 Parganas,
+                Jogibattala Khasmallik, Near Baruipur Padmapukur More,
                 <br />
-                West Bengal – 700 144
+                Beside Holy Cross School, West Bengal 700144
               </p>
               <p>
                 <i className="fa-solid fa-phone" style={{ marginRight: 6 }} />
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:+919903475355">9903475355</a>
               </p>
               <p>
                 <i className="fa-solid fa-envelope" style={{ marginRight: 6 }} />
@@ -75,12 +75,12 @@ export default function ContactPage() {
               <div style={{ marginTop: 14, fontSize: 14 }}>
                 <strong>Gym Hours:</strong>
                 <br />
-                Mon – Sat: 6:00 am – 9:00 pm
+                Mon â€“ Sat: 6:00 am â€“ 9:00 pm
                 <br />
-                Sunday: 8:00 am – 1:00 pm
+                Sunday: 8:00 am â€“ 1:00 pm
               </div>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919903475355"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"
@@ -93,9 +93,9 @@ export default function ContactPage() {
             {/* Quick info cards */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {[
-                { icon: 'fa-solid fa-clock', title: 'Weekdays', sub: 'Mon – Sat', time: '6:00 am – 9:00 pm' },
-                { icon: 'fa-solid fa-sun', title: 'Sunday', sub: 'Limited hours', time: '8:00 am – 1:00 pm' },
-                { icon: 'fa-solid fa-phone', title: 'Phone', sub: 'Call us anytime', time: '+91 98765 43210' },
+                { icon: 'fa-solid fa-clock', title: 'Weekdays', sub: 'Mon â€“ Sat', time: '6:00 am â€“ 9:00 pm' },
+                { icon: 'fa-solid fa-sun', title: 'Sunday', sub: 'Limited hours', time: '8:00 am â€“ 1:00 pm' },
+                { icon: 'fa-solid fa-phone', title: 'Phone', sub: 'Call us anytime', time: '9903475355' },
                 { icon: 'fa-brands fa-whatsapp', title: 'WhatsApp', sub: 'Fastest reply', time: 'Usually within the hour' },
               ].map((item) => (
                 <div
@@ -120,7 +120,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Map ── */}
+      {/* â”€â”€ Map â”€â”€ */}
       <section className="contact-map" style={{ paddingTop: 0 }}>
         <div className="container">
           <p className="eyebrow">Get directions</p>
@@ -147,7 +147,7 @@ export default function ContactPage() {
               <i className="fa-solid fa-map-location-dot" /> Open in Google Maps
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost"
@@ -158,7 +158,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* â”€â”€ CTA â”€â”€ */}
       <section className="standard" style={{ paddingBottom: 80 }}>
         <div className="container">
           <p className="eyebrow">Come train with us</p>
@@ -168,12 +168,12 @@ export default function ContactPage() {
             <span style={{ color: 'var(--gold)' }}>NO COMMITMENT.</span>
           </h2>
           <p style={{ maxWidth: 560, margin: '0 auto 28px', color: 'rgba(255,255,255,.78)' }}>
-            Walk in, meet the coaches, try a class. If you love it — pick a plan. If not — no
+            Walk in, meet the coaches, try a class. If you love it â€” pick a plan. If not â€” no
             pressure. We just want you to experience what real coaching feels like.
           </p>
           <div className="actions" style={{ justifyContent: 'center' }}>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
@@ -189,3 +189,4 @@ export default function ContactPage() {
     </>
   )
 }
+

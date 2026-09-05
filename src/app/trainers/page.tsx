@@ -1,9 +1,9 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { trainersList } from '@/lib/data/trainers'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Our Trainers | IRONPRIT Fitness',
+  title: 'Our Trainers',
   description:
     'Meet the certified coaches at IRONPRIT Fitness Baruipur. Professional trainers dedicated to your real transformation.',
 }
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function TrainersPage() {
   return (
     <>
-      {/* ── Hero ── */}
+      {/* â”€â”€ Hero â”€â”€ */}
       <section className="about-hero" style={{ background: '#f6f3ea' }}>
         <div className="about-hero-copy">
           <p className="eyebrow">Your coaches</p>
@@ -34,7 +34,7 @@ export default function TrainersPage() {
         </div>
       </section>
 
-      {/* ── Trainers list ── */}
+      {/* â”€â”€ Trainers list â”€â”€ */}
       <section className="trainers-list">
         <div className="container">
           <p className="eyebrow">Our coaches</p>
@@ -66,7 +66,7 @@ export default function TrainersPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* â”€â”€ CTA â”€â”€ */}
       <section className="about-cta">
         <div className="container" style={{ textAlign: 'center' }}>
           <p className="eyebrow">Train with the best</p>
@@ -83,7 +83,7 @@ export default function TrainersPage() {
               View Plans
             </Link>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919903475355"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost"
@@ -96,3 +96,4 @@ export default function TrainersPage() {
     </>
   )
 }
+

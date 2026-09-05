@@ -22,7 +22,7 @@ export default function Footer() {
           </p>
         </div>
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919903475355"
           target="_blank"
           rel="noopener noreferrer"
           className="btn"
@@ -58,7 +58,7 @@ export default function Footer() {
                 <i className="fa-brands fa-youtube" />
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919903475355"
                 aria-label="WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -92,13 +92,15 @@ export default function Footer() {
             <h4>Contact</h4>
             <p>
               <i className="fa-solid fa-location-dot" style={{ color: 'var(--gold)', marginRight: 8 }} />
-              Baruipur, South 24 Parganas,
+              Jogibattala Khasmallik, Near Baruipur
               <br />
-              West Bengal – 700 144
+              Padmapukur More, Beside Holy Cross School,
+              <br />
+              West Bengal 700144
             </p>
             <p>
               <i className="fa-solid fa-phone" style={{ color: 'var(--gold)', marginRight: 8 }} />
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919903475355">9903475355</a> / <a href="tel:+919903745355">9903745355</a>
             </p>
             <p>
               <i className="fa-solid fa-envelope" style={{ color: 'var(--gold)', marginRight: 8 }} />
@@ -116,7 +118,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p style={{ margin: 0 }}>
-            © {new Date().getFullYear()} IRONPRIT Fitness. All rights reserved.
+            Copyright © 2026 IRONPRIT Fitness. Strength that defines you.
           </p>
           <p style={{ margin: 0 }}>
             Designed &amp; built with <span style={{ color: 'var(--red)' }}>♥</span> for Baruipur.
