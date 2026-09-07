@@ -76,7 +76,7 @@ export default function PackagesPage() {
         <div className="about-hero-media">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/portrait-of-female-boxer-2021-04-02-20-48-34-utc.jpg"
+            src="/images/Characters/6.png"
             alt="Athlete training at IRONPRIT"
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 28 }}
           />

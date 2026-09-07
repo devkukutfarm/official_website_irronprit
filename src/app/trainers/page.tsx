@@ -27,7 +27,7 @@ export default function TrainersPage() {
         </div>
         <div className="about-hero-media">
           <img
-            src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/trainer2-610x610.jpg"
+            src="/images/Characters/3.png"
             alt="IRONPRIT trainers"
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 28 }}
           />

@@ -75,8 +75,8 @@ export default function HomePage() {
 
         <div className="hero-media">
           <Image
-            src="/images/ironprit-banner.jpg"
-            alt="IRONPRIT Fitness gym floor"
+            src="/images/Characters/1.png"
+            alt="IRONPRIT Fitness athlete"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -170,15 +170,15 @@ export default function HomePage() {
 
           <div className="intro-photos">
             <Image
-              src="/images/GYM_5.png"
-              alt="Gym interior"
+              src="/images/Characters/5.png"
+              alt="Athlete training"
               width={380}
               height={460}
               style={{ borderRadius: 26, objectFit: 'cover' }}
             />
             <Image
-              src="/images/GYM_6.png"
-              alt="Training session"
+              src="/images/Characters/6.png"
+              alt="Member workout"
               width={340}
               height={430}
               style={{ borderRadius: 26, objectFit: 'cover' }}
@@ -240,7 +240,7 @@ export default function HomePage() {
       <section className="benefits">
         <div
           className="benefits-photo"
-          style={{ backgroundImage: 'url(/images/GYM_4.png)' }}
+          style={{ backgroundImage: 'url(/images/Characters/13.png)' }}
         />
         <div className="benefits-copy">
           <p className="eyebrow">Why choose us</p>
@@ -340,7 +340,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow" style={{ color: 'var(--gold)' }}>Member stories</p>
             <Image
-              src="/images/GYM_3.png"
+              src="/images/Characters/4.png"
               alt="Member review"
               width={360}
               height={360}
@@ -362,7 +362,7 @@ export default function HomePage() {
             <div className="quote-meta">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/trainer2-610x610.jpg"
+                src="/images/Characters/3.png"
                 alt="Member"
                 width={56}
                 height={56}

@@ -25,7 +25,7 @@ export default function PushSection() {
       <div
         ref={bgRef}
         className="bg"
-        style={{ backgroundImage: 'url(/images/GYM_3.png)' }}
+        style={{ backgroundImage: 'url(/images/Characters/4.png)' }}
       />
       <div className="container">
         <p className="eyebrow" style={{ color: 'var(--gold)' }}>

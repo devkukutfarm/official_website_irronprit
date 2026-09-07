@@ -41,7 +41,7 @@ export default function ContactPage() {
         </div>
         <div className="about-hero-media">
           <img
-            src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/african-bodybuilder-exercising-with-dumbbells-PYYBBGT.jpg"
+            src="/images/Characters/2.png"
             alt="IRONPRIT Fitness"
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 28 }}
           />
