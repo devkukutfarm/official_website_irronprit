@@ -36,12 +36,12 @@ export default function Header() {
           <Link href="/" className="logo">
             <Image
               src="/images/Inner-logo.png"
-              alt="IRONPRIT logo"
+              alt="IRRONPRIT logo"
               width={64}
               height={64}
               priority
             />
-            <span className="logo-text">IRONPRIT</span>
+            <span className="logo-text">IRRONPRIT</span>
           </Link>
 
           <nav className="nav-links" aria-label="Main navigation">

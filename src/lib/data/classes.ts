@@ -22,7 +22,7 @@ export const classesData: Record<string, ClassData> = {
     photo: 'https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/african-bodybuilder-exercising-with-dumbbells-PYYBBGT.jpg',
     poster: 'https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/african-bodybuilder-exercising-with-dumbbells-PYYBBGT-660x770.jpg',
     lead: 'Build muscle, power and confidence with progressive lifting.',
-    benefits: 'Strength at IRONPRIT is built around proper technique, progressive overload and a plan that matches your goal. You will learn how to lift with purpose — not guesswork — so every session moves you forward.',
+    benefits: 'Strength at IRRONPRIT is built around proper technique, progressive overload and a plan that matches your goal. You will learn how to lift with purpose — not guesswork — so every session moves you forward.',
   },
   cardio: {
     id: 'cardio',
@@ -46,7 +46,7 @@ export const classesData: Record<string, ClassData> = {
     photo: 'https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/woman-training-with-dumbbells-in-the-gym-2021-07-15-16-56-12-utc.jpg',
     poster: 'https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/woman-training-with-dumbbells-in-the-gym-2021-07-15-16-56-12-utc-660x770.jpg',
     lead: 'High-intensity sessions for people who want faster results.',
-    benefits: 'Short, focused intervals that push your limits safely. HIIT at IRONPRIT is coached for form first, then intensity — so you get results without wrecking recovery.',
+    benefits: 'Short, focused intervals that push your limits safely. HIIT at IRRONPRIT is coached for form first, then intensity — so you get results without wrecking recovery.',
   },
   yoga: {
     id: 'yoga',
@@ -58,7 +58,7 @@ export const classesData: Record<string, ClassData> = {
     photo: 'https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/sportsman-and-smiling-sportswoman-doing-plank-and-2021-06-08-01-37-28-utc.jpg',
     poster: 'https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/sportsman-and-smiling-sportswoman-doing-plank-and-2021-06-08-01-37-28-utc-660x770.jpg',
     lead: 'Mobility, breath and recovery — 2 or 3 classes every week.',
-    benefits: 'Yoga at IRONPRIT is recovery with intent. Improve mobility, control your breath and stay injury-resistant so your lifting and conditioning keep progressing.',
+    benefits: 'Yoga at IRRONPRIT is recovery with intent. Improve mobility, control your breath and stay injury-resistant so your lifting and conditioning keep progressing.',
   },
   zumba: {
     id: 'zumba',

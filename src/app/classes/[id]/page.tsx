@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const cls = classesData[id]
   if (!cls) return {}
   return {
-    title: `${cls.title} | IRONPRIT Fitness`,
+    title: `${cls.title} | IRRONPRIT Fitness`,
     description: cls.lead,
   }
 }
@@ -75,7 +75,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
       <section className="class-video" id="class-video">
         <div className="container">
           <p className="eyebrow">See it in action</p>
-          <h2 className="display">{cls.title.toUpperCase()} AT IRONPRIT</h2>
+          <h2 className="display">{cls.title.toUpperCase()} AT IRRONPRIT</h2>
           <p className="video-note">A snapshot of what a typical session looks like.</p>
           <div className="video-frame">
             <video controls preload="none" poster={cls.poster}>
@@ -137,12 +137,12 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
             <div>
               <p className="eyebrow">Ready to train?</p>
               <h2 className="display">
-                JOIN IRONPRIT
+                JOIN IRRONPRIT
                 <br />
                 <span className="accent">TODAY</span>
               </h2>
               <p style={{ color: 'var(--muted)', marginTop: 12 }}>
-                {cls.title} is included in all IRONPRIT membership plans. Start with a free trial —
+                {cls.title} is included in all IRRONPRIT membership plans. Start with a free trial —
                 no commitment required.
               </p>
               <div className="actions" style={{ marginTop: 28 }}>

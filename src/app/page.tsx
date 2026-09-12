@@ -8,9 +8,9 @@ import { trainersList } from '@/lib/data/trainers'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'IRONPRIT Fitness | Gym in Baruipur, West Bengal',
+  title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
   description:
-    'IRONPRIT Fitness â€” professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
+    'IRRONPRIT Fitness â€” professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
 }
 
 const homeFaqs = [
@@ -76,7 +76,7 @@ export default function HomePage() {
         <div className="hero-media">
           <Image
             src="/images/ironprit-banner.jpg"
-            alt="IRONPRIT Fitness gym floor"
+            alt="IRRONPRIT Fitness gym floor"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -88,13 +88,13 @@ export default function HomePage() {
             <div className="book-card-row">
               <Image
                 src="/images/Inner-logo.png"
-                alt="IRONPRIT"
+                alt="IRRONPRIT"
                 width={52}
                 height={52}
                 style={{ borderRadius: '50%', objectFit: 'cover' }}
               />
               <div>
-                <strong>IRONPRIT Fitness</strong>
+                <strong>IRRONPRIT Fitness</strong>
                 <small>Baruipur, West Bengal</small>
               </div>
             </div>
@@ -134,14 +134,14 @@ export default function HomePage() {
 
         <div className="container intro-grid">
           <div>
-            <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why IRONPRIT</p>
+            <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why IRRONPRIT</p>
             <h2 className="display" style={{ color: 'var(--white)' }}>
               MORE THAN A GYM.
               <br />
               <span style={{ color: 'var(--gold)' }}>A WAY OF LIFE.</span>
             </h2>
             <p style={{ color: 'rgba(255,255,255,.78)', marginBottom: 28 }}>
-              IRONPRIT was built on the belief that real results come from proper coaching, not
+              IRRONPRIT was built on the belief that real results come from proper coaching, not
               shortcuts. Every session is designed to move you forward â€” whether you&apos;re a
               beginner or a seasoned athlete.
             </p>
@@ -355,7 +355,7 @@ export default function HomePage() {
             </h2>
             <span className="sample-note">Member review</span>
             <p className="quote">
-              &ldquo;I had tried multiple gyms before IRONPRIT but always quit within a month. Here the
+              &ldquo;I had tried multiple gyms before IRRONPRIT but always quit within a month. Here the
               trainers actually pay attention to your form, track your progress and push you to be
               consistent. Three months in, I&apos;m stronger than I&apos;ve ever been.&rdquo;
             </p>
@@ -512,7 +512,7 @@ export default function HomePage() {
             <span className="accent">TODAY</span>
           </h2>
           <p className="lead" style={{ margin: '0 auto' }}>
-            Stop waiting for Monday. Come in for a free session and see what IRONPRIT is about.
+            Stop waiting for Monday. Come in for a free session and see what IRRONPRIT is about.
           </p>
           <div className="actions" style={{ justifyContent: 'center', marginTop: 28 }}>
             <Link href="/packages" className="btn">

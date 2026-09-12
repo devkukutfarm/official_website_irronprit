@@ -6,7 +6,7 @@
   --font-display: var(--font-oswald), var(--font-inter), sans-serif;
 }
 
-/* ── IRONPRIT design tokens ── */
+/* ── IRRONPRIT design tokens ── */
 :root {
   --green: #052a21;
   --green-mid: #0a3d30;
@@ -552,6 +552,18 @@ ul { margin: 0; padding: 0; list-style: none; }
   aspect-ratio: 4/5; object-fit: cover; object-position: center;
   border-radius: 28px;
 }
+/* Compact hero variant (e.g. Trainers) — avoids full-viewport scroll */
+.about-hero.hero-compact { min-height: auto; }
+.about-hero.hero-compact .about-hero-copy { padding-top: 56px; padding-bottom: 56px; }
+.about-hero.hero-compact .about-hero-media { padding-top: 28px; padding-bottom: 28px; }
+.about-hero.hero-compact.hero-banner .about-hero-media img { aspect-ratio: 16/11; max-height: 380px; }
+/* Trainer detail: keep the full name on one compact, unbroken line */
+.about-hero.hero-stack .about-hero-copy .display { font-size: clamp(30px,3.6vw,48px); white-space: nowrap; }
+/* Trainer detail bio: size the heading properly, relax its line-height, top-align the columns */
+.trainer-bio .class-member-grid { align-items: start; }
+.trainer-bio .display { font-size: clamp(30px,3.6vw,46px); line-height: 1.06; margin: 8px 0 18px; }
+/* Size the Gallery & Certifications section headings (were falling back to a tiny default) */
+.achievements .display, .trainer-gallery .display { font-size: clamp(32px,4.4vw,56px); line-height: 1.02; margin-bottom: 18px; }
 .about-intro { padding: 100px 0 80px; background: var(--white); }
 .about-intro-head { text-align: center; max-width: 820px; margin-bottom: 64px; }
 .about-intro-head .display { font-size: clamp(36px,5.4vw,72px); margin-bottom: 22px; }
@@ -759,7 +771,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact-map-actions .btn-ghost:hover { background: var(--green); color: var(--white); }
 
 /* ── Trainers list ── */
-.trainers-list-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 18px; }
+.trainers-list-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 18px; }
 .trainer-soon { min-height: 280px; display: grid; place-items: center; background: #f6f3ea; color: var(--ink); border: 2px dashed rgba(5,42,33,.22); }
 .trainer-soon::after { display: none; }
 .trainer-soon .soon-inner { text-align: center; padding: 28px 20px; }

@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Classes',
   description:
-    'Strength training, cardio, HIIT, yoga, zumba and personal training â€” six structured classes designed for every fitness goal at IRONPRIT Baruipur.',
+    'Strength training, cardio, HIIT, yoga, zumba and personal training â€” six structured classes designed for every fitness goal at IRRONPRIT Baruipur.',
 }
 
 const classFaqs = [

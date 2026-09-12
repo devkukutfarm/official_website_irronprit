@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Packages & Pricing',
   description:
-    'IRONPRIT membership plans — 1, 3, 6 and 12 months with up to 50% off and zero admission fee. Couple & referral offers available.',
+    'IRRONPRIT membership plans — 1, 3, 6 and 12 months with up to 50% off and zero admission fee. Couple & referral offers available.',
 }
 
 const plans = [
@@ -77,7 +77,7 @@ export default function PackagesPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/portrait-of-female-boxer-2021-04-02-20-48-34-utc.jpg"
-            alt="Athlete training at IRONPRIT"
+            alt="Athlete training at IRRONPRIT"
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 28 }}
           />
         </div>
@@ -201,7 +201,7 @@ export default function PackagesPage() {
       {/* ── Standard ── */}
       <section className="standard">
         <div className="container">
-          <p className="eyebrow">The IRONPRIT Standard</p>
+          <p className="eyebrow">The IRRONPRIT Standard</p>
           <ul>
             <li>No shortcuts.</li>
             <li>No false promises.</li>
@@ -228,7 +228,7 @@ export default function PackagesPage() {
               rel="noopener noreferrer"
               className="btn btn-dark"
             >
-              Join IRONPRIT
+              Join IRRONPRIT
             </a>
             <a href="tel:+919903475355" className="btn btn-ghost">
               Call 9903475355
