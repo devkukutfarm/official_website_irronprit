@@ -35,7 +35,7 @@ export default function Header() {
         <div className="container header-inner">
           <Link href="/" className="logo">
             <Image
-              src="/images/Inner-logo.png"
+              src="/images/Logo-with-arms.png"
               alt="IRRONPRIT logo"
               width={64}
               height={64}

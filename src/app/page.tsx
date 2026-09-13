@@ -75,8 +75,8 @@ export default function HomePage() {
 
         <div className="hero-media">
           <Image
-            src="/images/ironprit-banner.jpg"
-            alt="IRRONPRIT Fitness gym floor"
+            src="/images/Characters/1.png"
+            alt="IRONPRIT Fitness athlete"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -87,7 +87,7 @@ export default function HomePage() {
             <h3>Book a Free Trial</h3>
             <div className="book-card-row">
               <Image
-                src="/images/Inner-logo.png"
+                src="/images/Logo-with-arms.png"
                 alt="IRRONPRIT"
                 width={52}
                 height={52}
@@ -170,15 +170,15 @@ export default function HomePage() {
 
           <div className="intro-photos">
             <Image
-              src="/images/GYM_5.png"
-              alt="Gym interior"
+              src="/images/Characters/5.png"
+              alt="Athlete training"
               width={380}
               height={460}
               style={{ borderRadius: 26, objectFit: 'cover' }}
             />
             <Image
-              src="/images/GYM_6.png"
-              alt="Training session"
+              src="/images/Characters/6.png"
+              alt="Member workout"
               width={340}
               height={430}
               style={{ borderRadius: 26, objectFit: 'cover' }}
@@ -207,7 +207,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="lead">
-                Six structured classes designed to cover every angle of your fitness â€” strength,
+                Six structured classes designed to cover every angle of your fitness — strength,
                 conditioning, mobility and everything in between.
               </p>
               <Link href="/classes" className="btn btn-dark" style={{ marginTop: 18 }}>
@@ -240,7 +240,7 @@ export default function HomePage() {
       <section className="benefits">
         <div
           className="benefits-photo"
-          style={{ backgroundImage: 'url(/images/GYM_4.png)' }}
+          style={{ backgroundImage: 'url(/images/Characters/13.png)' }}
         />
         <div className="benefits-copy">
           <p className="eyebrow">Why choose us</p>
@@ -340,7 +340,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow" style={{ color: 'var(--gold)' }}>Member stories</p>
             <Image
-              src="/images/GYM_3.png"
+              src="/images/Characters/4.png"
               alt="Member review"
               width={360}
               height={360}
@@ -362,7 +362,7 @@ export default function HomePage() {
             <div className="quote-meta">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/trainer2-610x610.jpg"
+                src="/images/Characters/3.png"
                 alt="Member"
                 width={56}
                 height={56}
@@ -404,41 +404,53 @@ export default function HomePage() {
             {[
               {
                 name: '1 Month Pro',
-                old: 'â‚¹3,500',
-                now: 'â‚¹1,999',
+                old: '₹3,500',
+                now: '₹1,999',
                 featured: false,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%201%20Month%20Pro%20package%20(Rs%201999).',
-                features: ['Gym floor access', 'Premium gym shaker', 'Zero admission fee'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%201%20Month%20Pro%20package%20(Rs%201999).',
+                features: ['Premium Gym Shaker', 'Zero admission fee'],
               },
               {
                 name: '3 Months Elite',
-                old: 'â‚¹8,000',
-                now: 'â‚¹3,999',
+                old: '₹8,000',
+                now: '₹3,999',
                 featured: false,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%203%20Months%20Elite%20package%20(Rs%203999).',
-                features: ['Gym towel', '1 steam bath session', 'Zero admission fee'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%203%20Months%20Elite%20package%20(Rs%203999).',
+                features: ['Gym Towel', '1 Steam Bath Session'],
               },
               {
                 name: '6 Months Supreme',
-                old: 'â‚¹14,500',
-                now: 'â‚¹6,998',
+                old: '₹14,500',
+                now: '₹6,998',
                 featured: true,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%206%20Months%20Supreme%20package%20(Rs%206998).',
-                features: ['Towel & premium shaker', '2 steam bath sessions', '2 yoga sessions / week', '3-day trial pass'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%206%20Months%20Supreme%20package%20(Rs%206998).',
+                features: [
+                  'Gym Towel & Premium Shaker',
+                  '2 Steam Bath Sessions',
+                  '2 Yoga Sessions / week',
+                  '3-Day Trial Pass (valid 2 months)',
+                ],
               },
               {
                 name: '12 Months Ultimate',
-                old: 'â‚¹26,500',
-                now: 'â‚¹12,999',
+                old: '₹26,500',
+                now: '₹12,999',
                 featured: false,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%2012%20Months%20Ultimate%20package%20(Rs%2012999).',
-                features: ['Premium gym bag & essentials', '2 yoga + 1 Zumba / week', '5 steam baths / month', '5-day friend trial pass'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%2012%20Months%20Ultimate%20package%20(Rs%2012999).',
+                features: [
+                  'Premium Gym Bag & Gym Essentials',
+                  '2 Yoga Sessions / week',
+                  '1 Zumba Session / week',
+                  '5 Steam Bath Sessions / month',
+                  '5-Day Friend Trial Pass (valid 2 months)',
+                ],
               },
             ].map((plan) => (
               <article key={plan.name} className={`price-card${plan.featured ? ' featured' : ''}`}>
                 <h3>{plan.name}</h3>
                 <div className="price-old">{plan.old}</div>
-                <div className="price-now">{plan.now}</div>
+                <div className="price-now"><span className="cur">₹</span>{plan.now.replace('₹', '')}</div>
+                <span className="gift-label">Gifts included</span>
                 <ul>
                   {plan.features.map((f) => (
                     <li key={f}>
@@ -460,43 +472,77 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="offer-row">
-            <article className="offer-box offer-refer">
-              <span className="offer-icon" aria-hidden="true">
-                <i className="fa-solid fa-gift" />
-              </span>
-              <span className="offer-label">Referral reward</span>
-              <h3>Bring a friend</h3>
-              <p>
-                Refer a friend and get <strong>1 month free</strong> +{' '}
-                <strong>20% off</strong> on any package.</p>
-              <a
-                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20to%20claim%20the%20referral%20offer."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-                style={{ alignSelf: 'flex-start' }}
-              >
-                Claim on WhatsApp
-              </a>
+          {/* Referral strip */}
+          <div className="refer-strip">
+            <i className="fa-solid fa-gift" aria-hidden="true" />
+            <span>
+              <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> +{' '}
+              <strong className="refer-accent">20% OFF</strong> on any package!
+            </span>
+            <a
+              href="https://wa.me/919903475355?text=Hi%20IRRONPRIT%2C%20I%20want%20to%20claim%20the%20referral%20offer."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Claim reward
+            </a>
+          </div>
+
+          {/* Special offers */}
+          <div className="special-head">
+            <p className="eyebrow">More ways to save</p>
+            <h2 className="display">Special Offers</h2>
+          </div>
+
+          <article className="offer-box offer-couple offer-couple-wide">
+            <span className="offer-icon" aria-hidden="true">
+              <i className="fa-solid fa-heart" />
+            </span>
+            <span className="offer-label">Couple / Dual Offer</span>
+            <h3>Train together, save together</h3>
+            <p>
+              Join in with a partner for the yearly package. Get <strong>10% off</strong> on
+              monthly, quarterly and half-yearly plans — and on yearly, you both train for a flat{' '}
+              <strong>₹18,999</strong>. Ultimate value together!
+            </p>
+            <a
+              href="https://wa.me/919903475355?text=Hi%20IRRONPRIT%2C%20I%20want%20the%20couple%20%2F%20dual%20offer."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+              style={{ alignSelf: 'flex-start' }}
+            >
+              Ask for couple rate
+            </a>
+          </article>
+
+          <div className="class-price-grid">
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-music" aria-hidden="true" /> Zumba
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
             </article>
-            <article className="offer-box offer-couple">
-              <span className="offer-icon" aria-hidden="true">
-                <i className="fa-solid fa-heart" />
-              </span>
-              <span className="offer-label">Couple / Dual</span>
-              <h3>Train together</h3>
-              <p>
-                <strong>10% off</strong> on monthly, quarterly and half-yearly. Yearly together at
-                a flat <strong>â‚¹18,999</strong>.</p>
-              <a
-                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20the%20couple%20%2F%20dual%20offer."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                Ask for couple rate
-              </a>
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-spa" aria-hidden="true" /> Yoga
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
             </article>
           </div>
         </div>

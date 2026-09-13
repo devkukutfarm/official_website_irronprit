@@ -82,8 +82,8 @@ export default function AboutPage() {
         </div>
         <div className="about-hero-media">
           <Image
-            src="/images/GYM_5.png"
-            alt="IRRONPRIT Fitness gym"
+            src="/images/Characters/2.png"
+            alt="IRONPRIT Fitness athlete"
             width={600}
             height={750}
             priority
@@ -160,8 +160,8 @@ export default function AboutPage() {
             </div>
             <div className="about-who-photo">
               <Image
-                src="/images/GYM_6.png"
-                alt="Training at IRRONPRIT"
+                src="/images/Characters/5.png"
+                alt="Training at IRONPRIT"
                 width={520}
                 height={680}
                 style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: 28 }}
@@ -178,7 +178,7 @@ export default function AboutPage() {
             {/* Mission photo */}
             <div
               className="mvv-mission"
-              style={{ backgroundImage: 'url(/images/GYM_3.png)', minHeight: 640, borderRadius: 28 }}
+              style={{ backgroundImage: 'url(/images/Characters/7.png)', minHeight: 640, borderRadius: 28 }}
             >
               <div className="mvv-copy" style={{ padding: 36 }}>
                 <h3 style={{ color: 'var(--white)' }}>Our Mission</h3>
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 </div>
                 <div
                   className="mvv-photo"
-                  style={{ backgroundImage: 'url(/images/GYM_4.png)', minHeight: 220 }}
+                  style={{ backgroundImage: 'url(/images/Characters/8.png)', minHeight: 220 }}
                 />
               </div>
 
@@ -239,7 +239,7 @@ export default function AboutPage() {
       <section className="why-us">
         <div
           className="why-us-bg"
-          style={{ backgroundImage: 'url(/images/ironprit-banner.jpg)' }}
+          style={{ backgroundImage: 'url(/images/Characters/13.png)' }}
         />
         <div className="container">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why choose us</p>
@@ -322,7 +322,7 @@ export default function AboutPage() {
       <section className="founder">
         <div
           className="founder-photo"
-          style={{ backgroundImage: 'url(https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/trainer2-610x610.jpg)' }}
+          style={{ backgroundImage: 'url(/images/Characters/3.png)' }}
         />
         <div className="founder-copy">
           <p className="eyebrow">The person behind it</p>

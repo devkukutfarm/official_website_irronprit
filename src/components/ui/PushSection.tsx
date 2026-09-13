@@ -25,13 +25,13 @@ export default function PushSection() {
       <div
         ref={bgRef}
         className="bg"
-        style={{ backgroundImage: 'url(/images/GYM_3.png)' }}
+        style={{ backgroundImage: 'url(/images/Characters/4.png)' }}
       />
       <div className="container">
         <p className="eyebrow" style={{ color: 'var(--gold)' }}>
           Your next level
         </p>
-        <h2 className="display" style={{ color: 'var(--white)', fontSize: 'clamp(48px,8vw,110px)' }}>
+        <h2 className="display" style={{ color: 'var(--white)', fontSize: 'clamp(42px,6.4vw,88px)' }}>
           PUSH<br />
           <span style={{ color: 'var(--red)' }}>YOUR</span><br />
           LIMITS

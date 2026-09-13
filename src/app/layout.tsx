@@ -70,13 +70,9 @@ export const metadata: Metadata = {
     description: DEFAULT_DESC,
     images: [OG_IMAGE],
   },
-  icons: {
-    icon: [
-      { url: '/images/Inner-logo.png', type: 'image/png' },
-    ],
-    apple: '/images/Inner-logo.png',
-    shortcut: '/images/Inner-logo.png',
-  },
+  // App icons (favicon / apple-touch) are provided by the file-based
+  // conventions src/app/icon.png and src/app/apple-icon.png, both derived
+  // from the footer brand logo (Logo-with-arms.png).
   manifest: '/site.webmanifest',
   alternates: {
     canonical: SITE_URL,

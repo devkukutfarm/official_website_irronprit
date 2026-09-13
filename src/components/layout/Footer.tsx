@@ -7,7 +7,7 @@ export default function Footer() {
       {/* WhatsApp CTA bar */}
       <div className="footer-cta">
         <Image
-          src="/images/Inner-logo.png"
+          src="/images/Logo-with-arms.png"
           alt="IRRONPRIT"
           width={84}
           height={84}

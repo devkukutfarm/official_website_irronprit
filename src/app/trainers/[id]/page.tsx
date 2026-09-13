@@ -173,7 +173,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
             </p>
             <div className="quote-meta">
               <img
-                src="https://themes-themegoods.b-cdn.net/vive/wp-content/uploads/2021/09/trainer2-610x610.jpg"
+                src="/images/Characters/3.png"
                 alt="Member"
                 style={{ width: 56, height: 56, borderRadius: '50%', objectFit: 'cover' }}
               />
