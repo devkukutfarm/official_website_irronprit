@@ -8,9 +8,9 @@ import { trainersList } from '@/lib/data/trainers'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'IRONPRIT Fitness | Gym in Baruipur, West Bengal',
+  title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
   description:
-    'IRONPRIT Fitness â€” professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
+    'IRRONPRIT Fitness â€” professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
 }
 
 const homeFaqs = [
@@ -87,14 +87,14 @@ export default function HomePage() {
             <h3>Book a Free Trial</h3>
             <div className="book-card-row">
               <Image
-                src="/images/Inner-logo.png"
-                alt="IRONPRIT"
+                src="/images/Logo-with-arms.png"
+                alt="IRRONPRIT"
                 width={52}
                 height={52}
                 style={{ borderRadius: '50%', objectFit: 'cover' }}
               />
               <div>
-                <strong>IRONPRIT Fitness</strong>
+                <strong>IRRONPRIT Fitness</strong>
                 <small>Baruipur, West Bengal</small>
               </div>
             </div>
@@ -134,14 +134,14 @@ export default function HomePage() {
 
         <div className="container intro-grid">
           <div>
-            <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why IRONPRIT</p>
+            <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why IRRONPRIT</p>
             <h2 className="display" style={{ color: 'var(--white)' }}>
               MORE THAN A GYM.
               <br />
               <span style={{ color: 'var(--gold)' }}>A WAY OF LIFE.</span>
             </h2>
             <p style={{ color: 'rgba(255,255,255,.78)', marginBottom: 28 }}>
-              IRONPRIT was built on the belief that real results come from proper coaching, not
+              IRRONPRIT was built on the belief that real results come from proper coaching, not
               shortcuts. Every session is designed to move you forward â€” whether you&apos;re a
               beginner or a seasoned athlete.
             </p>
@@ -207,7 +207,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="lead">
-                Six structured classes designed to cover every angle of your fitness â€” strength,
+                Six structured classes designed to cover every angle of your fitness — strength,
                 conditioning, mobility and everything in between.
               </p>
               <Link href="/classes" className="btn btn-dark" style={{ marginTop: 18 }}>
@@ -355,7 +355,7 @@ export default function HomePage() {
             </h2>
             <span className="sample-note">Member review</span>
             <p className="quote">
-              &ldquo;I had tried multiple gyms before IRONPRIT but always quit within a month. Here the
+              &ldquo;I had tried multiple gyms before IRRONPRIT but always quit within a month. Here the
               trainers actually pay attention to your form, track your progress and push you to be
               consistent. Three months in, I&apos;m stronger than I&apos;ve ever been.&rdquo;
             </p>
@@ -404,41 +404,53 @@ export default function HomePage() {
             {[
               {
                 name: '1 Month Pro',
-                old: 'â‚¹3,500',
-                now: 'â‚¹1,999',
+                old: '₹3,500',
+                now: '₹1,999',
                 featured: false,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%201%20Month%20Pro%20package%20(Rs%201999).',
-                features: ['Gym floor access', 'Premium gym shaker', 'Zero admission fee'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%201%20Month%20Pro%20package%20(Rs%201999).',
+                features: ['Premium Gym Shaker', 'Zero admission fee'],
               },
               {
                 name: '3 Months Elite',
-                old: 'â‚¹8,000',
-                now: 'â‚¹3,999',
+                old: '₹8,000',
+                now: '₹3,999',
                 featured: false,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%203%20Months%20Elite%20package%20(Rs%203999).',
-                features: ['Gym towel', '1 steam bath session', 'Zero admission fee'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%203%20Months%20Elite%20package%20(Rs%203999).',
+                features: ['Gym Towel', '1 Steam Bath Session'],
               },
               {
                 name: '6 Months Supreme',
-                old: 'â‚¹14,500',
-                now: 'â‚¹6,998',
+                old: '₹14,500',
+                now: '₹6,998',
                 featured: true,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%206%20Months%20Supreme%20package%20(Rs%206998).',
-                features: ['Towel & premium shaker', '2 steam bath sessions', '2 yoga sessions / week', '3-day trial pass'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%206%20Months%20Supreme%20package%20(Rs%206998).',
+                features: [
+                  'Gym Towel & Premium Shaker',
+                  '2 Steam Bath Sessions',
+                  '2 Yoga Sessions / week',
+                  '3-Day Trial Pass (valid 2 months)',
+                ],
               },
               {
                 name: '12 Months Ultimate',
-                old: 'â‚¹26,500',
-                now: 'â‚¹12,999',
+                old: '₹26,500',
+                now: '₹12,999',
                 featured: false,
-                waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%2012%20Months%20Ultimate%20package%20(Rs%2012999).',
-                features: ['Premium gym bag & essentials', '2 yoga + 1 Zumba / week', '5 steam baths / month', '5-day friend trial pass'],
+                waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%2012%20Months%20Ultimate%20package%20(Rs%2012999).',
+                features: [
+                  'Premium Gym Bag & Gym Essentials',
+                  '2 Yoga Sessions / week',
+                  '1 Zumba Session / week',
+                  '5 Steam Bath Sessions / month',
+                  '5-Day Friend Trial Pass (valid 2 months)',
+                ],
               },
             ].map((plan) => (
               <article key={plan.name} className={`price-card${plan.featured ? ' featured' : ''}`}>
                 <h3>{plan.name}</h3>
                 <div className="price-old">{plan.old}</div>
-                <div className="price-now">{plan.now}</div>
+                <div className="price-now"><span className="cur">₹</span>{plan.now.replace('₹', '')}</div>
+                <span className="gift-label">Gifts included</span>
                 <ul>
                   {plan.features.map((f) => (
                     <li key={f}>
@@ -460,43 +472,77 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="offer-row">
-            <article className="offer-box offer-refer">
-              <span className="offer-icon" aria-hidden="true">
-                <i className="fa-solid fa-gift" />
-              </span>
-              <span className="offer-label">Referral reward</span>
-              <h3>Bring a friend</h3>
-              <p>
-                Refer a friend and get <strong>1 month free</strong> +{' '}
-                <strong>20% off</strong> on any package.</p>
-              <a
-                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20to%20claim%20the%20referral%20offer."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-                style={{ alignSelf: 'flex-start' }}
-              >
-                Claim on WhatsApp
-              </a>
+          {/* Referral strip */}
+          <div className="refer-strip">
+            <i className="fa-solid fa-gift" aria-hidden="true" />
+            <span>
+              <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> +{' '}
+              <strong className="refer-accent">20% OFF</strong> on any package!
+            </span>
+            <a
+              href="https://wa.me/919903475355?text=Hi%20IRRONPRIT%2C%20I%20want%20to%20claim%20the%20referral%20offer."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Claim reward
+            </a>
+          </div>
+
+          {/* Special offers */}
+          <div className="special-head">
+            <p className="eyebrow">More ways to save</p>
+            <h2 className="display">Special Offers</h2>
+          </div>
+
+          <article className="offer-box offer-couple offer-couple-wide">
+            <span className="offer-icon" aria-hidden="true">
+              <i className="fa-solid fa-heart" />
+            </span>
+            <span className="offer-label">Couple / Dual Offer</span>
+            <h3>Train together, save together</h3>
+            <p>
+              Join in with a partner for the yearly package. Get <strong>10% off</strong> on
+              monthly, quarterly and half-yearly plans — and on yearly, you both train for a flat{' '}
+              <strong>₹18,999</strong>. Ultimate value together!
+            </p>
+            <a
+              href="https://wa.me/919903475355?text=Hi%20IRRONPRIT%2C%20I%20want%20the%20couple%20%2F%20dual%20offer."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+              style={{ alignSelf: 'flex-start' }}
+            >
+              Ask for couple rate
+            </a>
+          </article>
+
+          <div className="class-price-grid">
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-music" aria-hidden="true" /> Zumba
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
             </article>
-            <article className="offer-box offer-couple">
-              <span className="offer-icon" aria-hidden="true">
-                <i className="fa-solid fa-heart" />
-              </span>
-              <span className="offer-label">Couple / Dual</span>
-              <h3>Train together</h3>
-              <p>
-                <strong>10% off</strong> on monthly, quarterly and half-yearly. Yearly together at
-                a flat <strong>â‚¹18,999</strong>.</p>
-              <a
-                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20the%20couple%20%2F%20dual%20offer."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                Ask for couple rate
-              </a>
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-spa" aria-hidden="true" /> Yoga
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
             </article>
           </div>
         </div>
@@ -512,7 +558,7 @@ export default function HomePage() {
             <span className="accent">TODAY</span>
           </h2>
           <p className="lead" style={{ margin: '0 auto' }}>
-            Stop waiting for Monday. Come in for a free session and see what IRONPRIT is about.
+            Stop waiting for Monday. Come in for a free session and see what IRRONPRIT is about.
           </p>
           <div className="actions" style={{ justifyContent: 'center', marginTop: 28 }}>
             <Link href="/packages" className="btn">

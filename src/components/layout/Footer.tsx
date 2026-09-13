@@ -7,8 +7,8 @@ export default function Footer() {
       {/* WhatsApp CTA bar */}
       <div className="footer-cta">
         <Image
-          src="/images/Inner-logo.png"
-          alt="IRONPRIT"
+          src="/images/Logo-with-arms.png"
+          alt="IRRONPRIT"
           width={84}
           height={84}
           style={{ borderRadius: 16, objectFit: 'cover' }}
@@ -38,13 +38,13 @@ export default function Footer() {
           <div className="footer-brand">
             <Image
               src="/images/Logo-with-arms.png"
-              alt="IRONPRIT Fitness"
+              alt="IRRONPRIT Fitness"
               width={96}
               height={96}
               style={{ borderRadius: '50%', objectFit: 'cover' }}
             />
             <p>
-              IRONPRIT Fitness is a professional gym in Baruipur, West Bengal — built around proper
+              IRRONPRIT Fitness is a professional gym in Baruipur, West Bengal — built around proper
               training, real coaching and a community that keeps you consistent.
             </p>
             <div className="socials" style={{ marginTop: 14 }}>
@@ -109,16 +109,16 @@ export default function Footer() {
             <p style={{ marginTop: 16, fontSize: 14 }}>
               <strong style={{ color: 'var(--gold)' }}>Hours:</strong>
               <br />
-              Mon – Sat: 6 am – 9 pm
+              Mon - Sat: 10:00 am - 10:00 pm
               <br />
-              Sunday: 8 am – 1 pm
+              Sunday: Closed
             </p>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p style={{ margin: 0 }}>
-            Copyright © 2026 IRONPRIT Fitness. Strength that defines you.
+            Copyright © 2026 IRRONPRIT Fitness. Strength that defines you.
           </p>
           <p style={{ margin: 0 }}>
             Designed &amp; built with <span style={{ color: 'var(--red)' }}>♥</span> for Baruipur.

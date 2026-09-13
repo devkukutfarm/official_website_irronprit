@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Packages & Pricing',
   description:
-    'IRONPRIT membership plans — 1, 3, 6 and 12 months with up to 50% off and zero admission fee. Couple & referral offers available.',
+    'IRRONPRIT membership plans — 1, 3, 6 and 12 months with up to 50% off and zero admission fee. Couple & referral offers available.',
 }
 
 const plans = [
@@ -13,10 +13,9 @@ const plans = [
     old: '₹3,500',
     now: '₹1,999',
     featured: false,
-    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%201%20Month%20Pro%20package%20(Rs%201999).',
+    waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%201%20Month%20Pro%20package%20(Rs%201999).',
     features: [
-      'Gym floor access',
-      'Premium gym shaker',
+      'Premium Gym Shaker',
       'Zero admission fee',
     ],
   },
@@ -25,11 +24,10 @@ const plans = [
     old: '₹8,000',
     now: '₹3,999',
     featured: false,
-    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%203%20Months%20Elite%20package%20(Rs%203999).',
+    waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%203%20Months%20Elite%20package%20(Rs%203999).',
     features: [
-      'Gym towel',
-      '1 steam bath session',
-      'Zero admission fee',
+      'Gym Towel',
+      '1 Steam Bath Session',
     ],
   },
   {
@@ -37,12 +35,12 @@ const plans = [
     old: '₹14,500',
     now: '₹6,998',
     featured: true,
-    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%206%20Months%20Supreme%20package%20(Rs%206998).',
+    waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%206%20Months%20Supreme%20package%20(Rs%206998).',
     features: [
-      'Towel & premium shaker',
-      '2 steam bath sessions',
-      '2 yoga sessions / week',
-      '3-day trial pass',
+      'Gym Towel & Premium Shaker',
+      '2 Steam Bath Sessions',
+      '2 Yoga Sessions / week',
+      '3-Day Trial Pass (valid 2 months)',
     ],
   },
   {
@@ -50,12 +48,13 @@ const plans = [
     old: '₹26,500',
     now: '₹12,999',
     featured: false,
-    waMsg: 'Hi%20IRONPRIT%2C%20I%20want%20the%2012%20Months%20Ultimate%20package%20(Rs%2012999).',
+    waMsg: 'Hi%20IRRONPRIT%2C%20I%20want%20the%2012%20Months%20Ultimate%20package%20(Rs%2012999).',
     features: [
-      'Premium gym bag & essentials',
-      '2 yoga + 1 Zumba / week',
-      '5 steam baths / month',
-      '5-day friend trial pass',
+      'Premium Gym Bag & Gym Essentials',
+      '2 Yoga Sessions / week',
+      '1 Zumba Session / week',
+      '5 Steam Bath Sessions / month',
+      '5-Day Friend Trial Pass (valid 2 months)',
     ],
   },
 ]
@@ -109,7 +108,8 @@ export default function PackagesPage() {
               <article key={plan.name} className={`price-card${plan.featured ? ' featured' : ''}`}>
                 <h3>{plan.name}</h3>
                 <div className="price-old">{plan.old}</div>
-                <div className="price-now">{plan.now}</div>
+                <div className="price-now"><span className="cur">₹</span>{plan.now.replace('₹', '')}</div>
+                <span className="gift-label">Gifts included</span>
                 <ul>
                   {plan.features.map((f) => (
                     <li key={f}>
@@ -131,45 +131,77 @@ export default function PackagesPage() {
             ))}
           </div>
 
-          {/* Offers */}
-          <div className="offer-row">
-            <article className="offer-box offer-refer">
-              <span className="offer-icon" aria-hidden="true">
-                <i className="fa-solid fa-gift" />
-              </span>
-              <span className="offer-label">Referral reward</span>
-              <h3>Bring a friend</h3>
-              <p>
-                Refer a friend and get <strong>1 month free</strong> +{' '}
-                <strong>20% off</strong> on any package.
-              </p>
-              <a
-                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20to%20claim%20the%20referral%20offer."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                Claim on WhatsApp
-              </a>
+          {/* Referral strip */}
+          <div className="refer-strip">
+            <i className="fa-solid fa-gift" aria-hidden="true" />
+            <span>
+              <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> +{' '}
+              <strong className="refer-accent">20% OFF</strong> on any package!
+            </span>
+            <a
+              href="https://wa.me/919903475355?text=Hi%20IRRONPRIT%2C%20I%20want%20to%20claim%20the%20referral%20offer."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Claim reward
+            </a>
+          </div>
+
+          {/* Special offers */}
+          <div className="special-head">
+            <p className="eyebrow">More ways to save</p>
+            <h2 className="display">Special Offers</h2>
+          </div>
+
+          <article className="offer-box offer-couple offer-couple-wide">
+            <span className="offer-icon" aria-hidden="true">
+              <i className="fa-solid fa-heart" />
+            </span>
+            <span className="offer-label">Couple / Dual Offer</span>
+            <h3>Train together, save together</h3>
+            <p>
+              Join in with a partner for the yearly package. Get <strong>10% off</strong> on
+              monthly, quarterly and half-yearly plans — and on yearly, you both train for a flat{' '}
+              <strong>₹18,999</strong>. Ultimate value together!
+            </p>
+            <a
+              href="https://wa.me/919903475355?text=Hi%20IRRONPRIT%2C%20I%20want%20the%20couple%20%2F%20dual%20offer."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+              style={{ alignSelf: 'flex-start' }}
+            >
+              Ask for couple rate
+            </a>
+          </article>
+
+          <div className="class-price-grid">
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-music" aria-hidden="true" /> Zumba
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
             </article>
-            <article className="offer-box offer-couple">
-              <span className="offer-icon" aria-hidden="true">
-                <i className="fa-solid fa-heart" />
-              </span>
-              <span className="offer-label">Couple / Dual</span>
-              <h3>Train together</h3>
-              <p>
-                <strong>10% off</strong> on monthly, quarterly and half-yearly. Yearly together at
-                a flat <strong>₹18,999</strong>.
-              </p>
-              <a
-                href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20want%20the%20couple%20%2F%20dual%20offer."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                Ask for couple rate
-              </a>
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-spa" aria-hidden="true" /> Yoga
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
             </article>
           </div>
         </div>
@@ -201,7 +233,7 @@ export default function PackagesPage() {
       {/* ── Standard ── */}
       <section className="standard">
         <div className="container">
-          <p className="eyebrow">The IRONPRIT Standard</p>
+          <p className="eyebrow">The IRRONPRIT Standard</p>
           <ul>
             <li>No shortcuts.</li>
             <li>No false promises.</li>
@@ -228,7 +260,7 @@ export default function PackagesPage() {
               rel="noopener noreferrer"
               className="btn btn-dark"
             >
-              Join IRONPRIT
+              Join IRRONPRIT
             </a>
             <a href="tel:+919903475355" className="btn btn-ghost">
               Call 9903475355

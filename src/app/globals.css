@@ -6,7 +6,7 @@
   --font-display: var(--font-oswald), var(--font-inter), sans-serif;
 }
 
-/* ── IRONPRIT design tokens ── */
+/* ── IRRONPRIT design tokens ── */
 :root {
   --green: #052a21;
   --green-mid: #0a3d30;
@@ -262,14 +262,35 @@ ul { margin: 0; padding: 0; list-style: none; }
 .intro-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
 .intro .display { font-size: clamp(40px,5.4vw,72px); margin-bottom: 24px; }
 .intro p { color: rgba(255,255,255,.78); max-width: 540px; }
-.intro-photos { position: relative; min-height: 520px; }
-.intro-photos img { width: 58%; height: 460px; object-fit: cover; border-radius: 26px; }
-.intro-photos img:first-child { position: relative; z-index: 1; }
+/* Overlapping photo collage — aspect-ratio based so it frames the (square)
+   source photos cleanly and scales for both desktop and mobile without the
+   old fixed-height crop that cut the subjects off. */
+.intro-photos {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  aspect-ratio: 5 / 6;
+}
+.intro-photos img {
+  position: absolute;
+  margin: 0;
+  height: auto;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+}
+.intro-photos img:first-child {
+  width: 72%;
+  aspect-ratio: 4 / 5;
+  top: 0; left: 0; z-index: 1;
+}
 .intro-photos img:last-child {
-  position: absolute; right: 0; top: 70px;
-  width: 52%; height: 430px;
-  outline: 12px solid var(--gold);
-  outline-offset: -12px;
+  width: 58%;
+  aspect-ratio: 4 / 5;
+  right: 0; bottom: 0; z-index: 2;
+  outline: 10px solid var(--gold);
+  outline-offset: -10px;
 }
 .shape { position: absolute; left: 0; right: 0; height: 70px; color: var(--green); pointer-events: none; }
 .shape svg { width: 100%; height: 100%; display: block; }
@@ -367,16 +388,31 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .trainer-card span { color: var(--gold); font-size: 13px; font-weight: 700; }
 
+/* Homepage trainers: keep cards as portrait tiles framed on the subject.
+   auto-fill (not auto-fit) stops a lone card from stretching into a wide
+   landscape strip, and a portrait aspect ratio + subject-focused crop shows
+   the trainer's face/upper body instead of only the top of the head. */
+.trainers .trainer-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 300px));
+  justify-content: center;
+}
+.trainers .trainer-card {
+  aspect-ratio: 3 / 4;
+  min-height: 0;
+}
+.trainers .trainer-card .bg { background-position: center 18%; }
+
 /* ── Push / Parallax ── */
 .push {
-  position: relative; min-height: 520px;
+  position: relative; min-height: 420px;
+  padding: 64px 0;
   display: grid; place-items: center;
   color: var(--white); text-align: left; overflow: hidden;
 }
 .push .bg {
-  position: absolute; top: -20%; left: 0; right: 0;
-  height: 140%;
-  background-size: cover; background-position: center;
+  position: absolute; top: -10%; left: 0; right: 0;
+  height: 120%;
+  background-size: cover; background-position: 62% 22%;
   will-change: transform;
 }
 .push::after {
@@ -433,6 +469,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .price-card.featured h3 { color: var(--gold); }
 .price-old { color: #9a9a9a; text-decoration: line-through; font-size: 14px; }
 .price-now { font-family: var(--display); font-size: 40px; font-weight: 700; line-height: 1; margin: 6px 0 16px; }
+/* Currency symbol: the Oswald display font has no ₹ glyph, so render the
+   symbol in a font that always does (keeps the digits in the display font). */
+.cur { font-family: var(--font-inter), "Segoe UI", system-ui, "Noto Sans", Arial, sans-serif; }
+.price-now .cur { font-size: 0.82em; margin-right: 2px; }
 .price-card ul { display: grid; gap: 10px; margin-bottom: 22px; flex: 1; }
 .price-card li { display: flex; gap: 8px; font-size: 14px; }
 .price-card li i { color: var(--gold); margin-top: 4px; }
@@ -466,6 +506,58 @@ ul { margin: 0; padding: 0; list-style: none; }
 .offer-couple { background: var(--green); color: var(--white); border: 2px solid var(--gold); box-shadow: var(--shadow); }
 .offer-couple strong { color: var(--gold); }
 .offer-couple .btn { align-self: flex-start; }
+
+/* ── Gifts label on price cards ── */
+.gift-label {
+  display: block;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 800; color: var(--red); margin: 0 0 12px;
+}
+.price-card.featured .gift-label { color: var(--gold); }
+
+/* ── Referral strip ── */
+.refer-strip {
+  display: flex; align-items: center; justify-content: center;
+  gap: 18px; flex-wrap: wrap; text-align: center;
+  border: 2px dashed var(--gold);
+  background: var(--green); color: var(--white);
+  border-radius: 18px; padding: 20px 26px;
+  max-width: 920px; margin: 36px auto 0;
+}
+.refer-strip > i { color: var(--gold); font-size: 26px; }
+.refer-strip em { font-style: italic; color: var(--gold); font-weight: 700; }
+.refer-strip strong { color: var(--gold); }
+.refer-strip .refer-accent { color: var(--red); }
+.refer-strip .btn { flex-shrink: 0; }
+
+/* ── Special offers ── */
+.special-head { text-align: center; margin: 64px 0 26px; }
+.special-head .display { font-size: clamp(32px,4.6vw,56px); }
+.offer-couple-wide { max-width: 920px; margin: 0 auto; }
+
+/* ── Zumba / Yoga class pricing ── */
+.class-price-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+  max-width: 920px; margin: 22px auto 0;
+}
+.class-price-card {
+  background: var(--green); color: var(--white);
+  border: 2px solid var(--gold); border-radius: 22px;
+  padding: 24px 28px;
+}
+.class-price-card h3 {
+  margin: 0 0 10px;
+  font-family: var(--display); font-style: italic;
+  text-transform: uppercase; font-size: 28px; color: var(--gold);
+  display: flex; align-items: center; gap: 12px;
+}
+.class-price-tier {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 13px 0; border-bottom: 1px dashed rgba(244,184,60,.3);
+}
+.class-price-tier:last-child { border-bottom: 0; }
+.class-price-tier span { color: rgba(255,255,255,.82); font-weight: 600; }
+.class-price-tier strong { color: var(--gold); font-family: var(--display); font-size: 22px; }
 
 /* ── Mid CTA ── */
 .mid-cta { padding: 90px 0; text-align: center; background: var(--white); }
@@ -552,6 +644,18 @@ ul { margin: 0; padding: 0; list-style: none; }
   aspect-ratio: 4/5; object-fit: cover; object-position: center;
   border-radius: 28px;
 }
+/* Compact hero variant (e.g. Trainers) — avoids full-viewport scroll */
+.about-hero.hero-compact { min-height: auto; }
+.about-hero.hero-compact .about-hero-copy { padding-top: 56px; padding-bottom: 56px; }
+.about-hero.hero-compact .about-hero-media { padding-top: 28px; padding-bottom: 28px; }
+.about-hero.hero-compact.hero-banner .about-hero-media img { aspect-ratio: 16/11; max-height: 380px; }
+/* Trainer detail: keep the full name on one compact, unbroken line */
+.about-hero.hero-stack .about-hero-copy .display { font-size: clamp(30px,3.6vw,48px); white-space: nowrap; }
+/* Trainer detail bio: size the heading properly, relax its line-height, top-align the columns */
+.trainer-bio .class-member-grid { align-items: start; }
+.trainer-bio .display { font-size: clamp(30px,3.6vw,46px); line-height: 1.06; margin: 8px 0 18px; }
+/* Size the Gallery & Certifications section headings (were falling back to a tiny default) */
+.achievements .display, .trainer-gallery .display { font-size: clamp(32px,4.4vw,56px); line-height: 1.02; margin-bottom: 18px; }
 .about-intro { padding: 100px 0 80px; background: var(--white); }
 .about-intro-head { text-align: center; max-width: 820px; margin-bottom: 64px; }
 .about-intro-head .display { font-size: clamp(36px,5.4vw,72px); margin-bottom: 22px; }
@@ -607,7 +711,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ── Why us ── */
 .why-us { position: relative; padding: 110px 0; color: var(--white); overflow: hidden; }
-.why-us-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.why-us-bg { position: absolute; inset: 0; background-size: cover; background-position: center 22%; }
 .why-us-bg::after { content: ""; position: absolute; inset: 0; background: rgba(3,25,18,.78); }
 .why-us .container { position: relative; z-index: 1; }
 .why-us .display { font-size: clamp(32px,4.8vw,60px); margin-bottom: 42px; }
@@ -759,7 +863,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact-map-actions .btn-ghost:hover { background: var(--green); color: var(--white); }
 
 /* ── Trainers list ── */
-.trainers-list-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 18px; }
+.trainers-list-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 18px; }
 .trainer-soon { min-height: 280px; display: grid; place-items: center; background: #f6f3ea; color: var(--ink); border: 2px dashed rgba(5,42,33,.22); }
 .trainer-soon::after { display: none; }
 .trainer-soon .soon-inner { text-align: center; padding: 28px 20px; }
@@ -837,6 +941,9 @@ body.lightbox-open { overflow: hidden; }
   .mvv-mission { min-height: 420px; }
   .hero-copy { padding: 60px 7% 40px; }
   .hero-media { min-height: 420px; }
+  /* Stacked (tablet) layout: bias the crop toward the athlete's upper body/face
+     instead of the default centre crop, which showed only the legs. */
+  .hero-media img { object-position: 60% 18%; }
   .book-card { left: 24px; bottom: 24px; }
   .badge-35 { right: 24px; top: 24px; }
   .header-phone { display: none; }
@@ -846,10 +953,10 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 820px) {
   .nav-links, .header-actions .btn { display: none; }
   .menu-toggle { display: grid; place-items: center; }
-  .hero-social, .logo-text { display: none; }
+  .hero-social { display: none; }
+  /* Show the brand name beside the logo on mobile (nav is hidden here, so there is room) */
+  .logo-text { display: block; font-size: 18px; }
   .class-card { height: 360px; }
-  .intro-photos { min-height: 380px; }
-  .intro-photos img, .intro-photos img:last-child { height: 320px; }
   .footer-cta { grid-template-columns: 1fr; text-align: center; }
   .footer-cta img { margin: 0 auto; }
   .footer-bottom { flex-direction: column; text-align: center; }
@@ -864,11 +971,24 @@ body.lightbox-open { overflow: hidden; }
   .mvv-mission .mvv-copy, .mvv-split .mvv-copy { padding: 24px 18px; }
   .standard li { font-size: 26px; }
   .faq .container { width: min(100% - 36px,var(--max)); }
-  .trainer-grid, .price-grid, .offer-row { grid-template-columns: 1fr; }
+  .trainer-grid, .price-grid, .offer-row, .class-price-grid { grid-template-columns: 1fr; }
   .hero-copy .display, .about-hero-copy .display, .about-intro-head .display, .intro .display, .push .display { font-size: 46px; }
   .standard ul { flex-direction: column; gap: 10px; }
-  .book-card { position: relative; left: 0; bottom: 0; width: calc(100% - 32px); margin: -40px auto 0; }
   .hero { display: block; padding-bottom: 24px; }
+  /* Frame the hero photo to its natural portrait ratio so the whole athlete
+     (head to feet) is visible on phones instead of cropping to the legs. */
+  .hero-media {
+    min-height: 0;
+    aspect-ratio: 3 / 5;
+    margin: 0 16px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .hero-media img { object-position: 62% center; }
+  .book-card {
+    position: absolute; left: 16px; right: 16px; bottom: 16px;
+    width: auto; margin: 0;
+  }
   .classes-hero .display, .class-hero-copy .display, .pkg-intro .display { font-size: 40px; }
   .class-hero, .class-member-grid, .stats-row, .classes-grid, .teaser-grid, .class-trainer-grid { grid-template-columns: 1fr; }
   .hero-copy, .class-hero-copy { padding: 48px 16px 28px; }

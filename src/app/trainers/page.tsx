@@ -5,23 +5,23 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Our Trainers',
   description:
-    'Meet the certified coaches at IRONPRIT Fitness Baruipur. Professional trainers dedicated to your real transformation.',
+    'Meet the certified coaches at IRRONPRIT Fitness Baruipur. Professional trainers dedicated to your real transformation.',
 }
 
 export default function TrainersPage() {
   return (
     <>
       {/* â”€â”€ Hero â”€â”€ */}
-      <section className="about-hero" style={{ background: '#f6f3ea' }}>
+      <section className="about-hero hero-compact hero-banner" style={{ background: '#f6f3ea' }}>
         <div className="about-hero-copy">
           <p className="eyebrow">Your coaches</p>
-          <h1 className="display">
+          <h1 className="display" style={{ color: 'var(--ink)' }}>
             MEET THE
             <br />
             <span className="accent">TEAM</span>
           </h1>
           <p style={{ color: 'var(--muted)', marginTop: 22, maxWidth: 440 }}>
-            Certified professionals who take your progress personally. At IRONPRIT, every trainer
+            Certified professionals who take your progress personally. At IRRONPRIT, every trainer
             knows your name, your goal and your starting point.
           </p>
         </div>

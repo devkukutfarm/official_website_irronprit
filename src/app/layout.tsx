@@ -19,9 +19,9 @@ const oswald = Oswald({
 })
 
 const SITE_URL = 'https://www.ironprit.com'
-const SITE_NAME = 'IRONPRIT Fitness'
+const SITE_NAME = 'IRRONPRIT Fitness'
 const DEFAULT_DESC =
-  'IRONPRIT Fitness is a professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training — real results through proper coaching.'
+  'IRRONPRIT Fitness is a professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training — real results through proper coaching.'
 const OG_IMAGE = `${SITE_URL}/images/ironprit-banner.jpg`
 
 export const metadata: Metadata = {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'IRONPRIT Fitness — Gym in Baruipur, West Bengal',
+        alt: 'IRRONPRIT Fitness — Gym in Baruipur, West Bengal',
       },
     ],
   },
@@ -70,13 +70,9 @@ export const metadata: Metadata = {
     description: DEFAULT_DESC,
     images: [OG_IMAGE],
   },
-  icons: {
-    icon: [
-      { url: '/images/Inner-logo.png', type: 'image/png' },
-    ],
-    apple: '/images/Inner-logo.png',
-    shortcut: '/images/Inner-logo.png',
-  },
+  // App icons (favicon / apple-touch) are provided by the file-based
+  // conventions src/app/icon.png and src/app/apple-icon.png, both derived
+  // from the footer brand logo (Logo-with-arms.png).
   manifest: '/site.webmanifest',
   alternates: {
     canonical: SITE_URL,

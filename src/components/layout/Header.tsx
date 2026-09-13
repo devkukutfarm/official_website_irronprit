@@ -35,13 +35,13 @@ export default function Header() {
         <div className="container header-inner">
           <Link href="/" className="logo">
             <Image
-              src="/images/Inner-logo.png"
-              alt="IRONPRIT logo"
+              src="/images/Logo-with-arms.png"
+              alt="IRRONPRIT logo"
               width={64}
               height={64}
               priority
             />
-            <span className="logo-text">IRONPRIT</span>
+            <span className="logo-text">IRRONPRIT</span>
           </Link>
 
           <nav className="nav-links" aria-label="Main navigation">

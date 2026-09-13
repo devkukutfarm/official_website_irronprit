@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const trainer = trainersData[id]
   if (!trainer) return {}
   return {
-    title: `${trainer.name} | IRONPRIT Fitness`,
+    title: `${trainer.name} | IRRONPRIT Fitness`,
     description: trainer.lead,
   }
 }
@@ -43,13 +43,11 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
   return (
     <>
       {/* ── Hero split ── */}
-      <section className="about-hero" style={{ background: '#031912' }}>
+      <section className="about-hero hero-compact hero-stack" style={{ background: '#031912' }}>
         <div className="about-hero-copy">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>{trainer.role}</p>
           <h1 className="display" style={{ color: 'var(--white)' }}>
-            {trainer.name.toUpperCase().split(' ').map((w, i) => (
-              <span key={i}>{w}<br /></span>
-            ))}
+            {trainer.name.toUpperCase()}
           </h1>
           <p style={{ color: 'rgba(255,255,255,.78)', marginTop: 18, fontStyle: 'italic', fontSize: 18, fontWeight: 600, maxWidth: 420 }}>
             &ldquo;{trainer.lead}&rdquo;
@@ -78,7 +76,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* ── Bio ── */}
-      <section className="founder" style={{ display: 'block', background: 'var(--white)', padding: '90px 0' }}>
+      <section className="founder trainer-bio" style={{ display: 'block', background: 'var(--white)', padding: '90px 0' }}>
         <div className="container">
           <div className="class-member-grid">
             <div>
@@ -137,13 +135,13 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
       {/* ── Gallery ── */}
       <section className="trainer-gallery">
         <div className="container">
-          <p className="eyebrow">At IRONPRIT</p>
+          <p className="eyebrow">At IRRONPRIT</p>
           <h2 className="display" style={{ marginBottom: 18 }}>
             GYM <span className="accent">GALLERY</span>
           </h2>
           <div className="gallery-grid">
             {gymPhotos.map((src, i) => (
-              <img key={i} src={src} alt={`IRONPRIT gym ${i + 1}`} />
+              <img key={i} src={src} alt={`IRRONPRIT gym ${i + 1}`} />
             ))}
           </div>
         </div>
@@ -171,7 +169,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
             <p className="quote">
               &ldquo;Training with {trainer.name.split(' ')[0]} changed how I think about fitness. The
               attention to form, the progressive plans and the genuine care for your progress makes
-              IRONPRIT unlike any gym I&apos;ve trained at before.&rdquo;
+              IRRONPRIT unlike any gym I&apos;ve trained at before.&rdquo;
             </p>
             <div className="quote-meta">
               <img
@@ -198,7 +196,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
             {trainer.name.split(' ')[0].toUpperCase()}
           </h2>
           <p className="lead" style={{ margin: '12px auto 0' }}>
-            Start with a free trial and experience the IRONPRIT difference first-hand.
+            Start with a free trial and experience the IRRONPRIT difference first-hand.
           </p>
           <div className="actions" style={{ justifyContent: 'center', marginTop: 28 }}>
             <Link href="/packages" className="btn btn-dark">
