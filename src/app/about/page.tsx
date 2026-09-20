@@ -205,10 +205,14 @@ export default function AboutPage() {
                     mentally and in their habits.
                   </p>
                 </div>
-                <div
-                  className="mvv-photo"
-                  style={{ backgroundImage: 'url(/images/Characters/8.png)', minHeight: 220 }}
-                />
+                <div className="mvv-photo">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/Characters/8.png"
+                    alt="IRONPRIT vision"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
               </div>
 
               <div style={{ background: 'var(--gold)', borderRadius: 28, padding: '28px 24px' }}>
