@@ -96,9 +96,14 @@ export default function AboutPage() {
             coaching that produces real, lasting results.
           </p>
           <div className="actions" style={{ marginTop: 32 }}>
-            <Link href="/packages" className="btn">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScXW9WUCkpE8DMD4KNH-4P-a7j6iWlKjqvld0He3oZ1AiIORw/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
               Join IRRONPRIT
-            </Link>
+            </a>
             <Link href="/contact" className="btn btn-ghost">
               Find Us
             </Link>

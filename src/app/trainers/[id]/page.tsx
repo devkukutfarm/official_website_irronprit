@@ -113,9 +113,14 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
                 {trainer.bio}
               </p>
               <div className="actions" style={{ marginTop: 28 }}>
-                <Link href="/packages" className="btn">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScXW9WUCkpE8DMD4KNH-4P-a7j6iWlKjqvld0He3oZ1AiIORw/viewform?usp=publish-editor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
                   Train With {trainer.name.split(' ')[0]}
-                </Link>
+                </a>
               </div>
             </div>
             <div style={{ background: 'var(--gold)', borderRadius: 24, padding: 32 }}>

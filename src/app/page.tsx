@@ -89,9 +89,14 @@ export default function HomePage() {
             Real transformation through proper training, consistency and discipline.
           </p>
           <div className="actions" style={{ marginTop: 36 }}>
-            <Link href="/packages" className="btn">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScXW9WUCkpE8DMD4KNH-4P-a7j6iWlKjqvld0He3oZ1AiIORw/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
               Start Your Journey
-            </Link>
+            </a>
             <Link href="/classes" className="btn btn-dark">
               Explore Classes
             </Link>
