@@ -1,4 +1,4 @@
-# IRONPRIT Fitness — Product Requirements Document
+# IRRONPRIT Fitness — Product Requirements Document
 
 **Version:** 1.0  
 **Date:** 2026-09-06  
@@ -24,7 +24,7 @@
 
 ## 1. Project Overview
 
-IRONPRIT Fitness is a gym brand based in Baruipur, West Bengal. This document defines the full product requirement — from a public-facing SEO website through a multi-branch management backend to a future e-commerce layer.
+IRRONPRIT Fitness is a gym brand based in Baruipur, West Bengal. This document defines the full product requirement — from a public-facing SEO website through a multi-branch management backend to a future e-commerce layer.
 
 | Phase | Deliverable | Status |
 |-------|-------------|--------|
@@ -71,7 +71,7 @@ IRONPRIT Fitness is a gym brand based in Baruipur, West Bengal. This document de
 
 | Route | Page | Description |
 |-------|------|-------------|
-| `/` | Home | Hero, Why IRONPRIT, Classes preview, Stats, Trainers preview, Push section, Reviews, Pricing teaser, Footer CTA |
+| `/` | Home | Hero, Why IRRONPRIT, Classes preview, Stats, Trainers preview, Push section, Reviews, Pricing teaser, Footer CTA |
 | `/about` | About Us | Story, Mission/Vision/Values, Why choose us, Approach (Train/Learn/Transform), Founder bio, Certifications, Standard, FAQ |
 | `/classes` | Classes | Hero, 6-class grid (Strength, Cardio, HIIT, Yoga, Zumba, PT), Join CTA, Price teaser, FAQ |
 | `/classes/[id]` | Class Detail | Stats, Description, Benefits, Trainers for this class, Membership card |
@@ -197,7 +197,7 @@ IRONPRIT Fitness is a gym brand based in Baruipur, West Bengal. This document de
 
 Allows admin to edit official website content without code changes:
 - Hero text (heading, subheading, CTA labels)
-- Why IRONPRIT bullets
+- Why IRRONPRIT bullets
 - Stats numbers (years, trainers, members)
 - Member reviews / testimonials
 - Announcements / promo banner text

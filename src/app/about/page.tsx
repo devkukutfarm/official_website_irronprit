@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'IRONPRIT Fitness was built on the belief that real transformation comes through proper training and consistency. Meet our founder and learn our story.',
+    'IRRONPRIT Fitness was built on the belief that real transformation comes through proper training and consistency. Meet our founder and learn our story.',
 }
 
 const certs = [
@@ -36,15 +36,15 @@ const certs = [
 
 const aboutFaqs = [
   {
-    q: 'When was IRONPRIT founded?',
-    a: 'IRONPRIT Fitness was founded in Baruipur, West Bengal, with the mission of bringing professional fitness coaching to the community.',
+    q: 'When was IRRONPRIT founded?',
+    a: 'IRRONPRIT Fitness was founded in Baruipur, West Bengal, with the mission of bringing professional fitness coaching to the community.',
   },
   {
-    q: 'What makes IRONPRIT different from other gyms?',
+    q: 'What makes IRRONPRIT different from other gyms?',
     a: 'We focus on coaching quality over headcount. Every member gets personalised attention, form correction and a plan that actually suits their goal — not just a membership card.',
   },
   {
-    q: 'Is IRONPRIT suitable for beginners?',
+    q: 'Is IRRONPRIT suitable for beginners?',
     a: 'Absolutely. We welcome complete beginners and tailor every program to current fitness level. Our trainers ensure you start safely and build confidence progressively.',
   },
   {
@@ -68,12 +68,12 @@ export default function AboutPage() {
             PEOPLE
           </h1>
           <p style={{ color: 'rgba(255,255,255,.78)', marginTop: 22, maxWidth: 440 }}>
-            IRONPRIT was born from a simple belief — every person deserves access to proper fitness
+            IRRONPRIT was born from a simple belief — every person deserves access to proper fitness
             coaching that produces real, lasting results.
           </p>
           <div className="actions" style={{ marginTop: 32 }}>
             <Link href="/packages" className="btn">
-              Join IRONPRIT
+              Join IRRONPRIT
             </Link>
             <Link href="/contact" className="btn btn-ghost">
               Find Us
@@ -105,7 +105,7 @@ export default function AboutPage() {
               TRANSFORM.
             </h2>
             <p>
-              Too many gyms sell memberships, not results. At IRONPRIT we measure success by
+              Too many gyms sell memberships, not results. At IRRONPRIT we measure success by
               the progress of our members, not by how many sign up.
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Why IRONPRIT ── */}
+      {/* ── Why IRRONPRIT ── */}
       <section className="why-us">
         <div
           className="why-us-bg"
@@ -248,7 +248,7 @@ export default function AboutPage() {
         <div className="container">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why choose us</p>
           <h2 className="display" style={{ color: 'var(--white)' }}>
-            THE IRONPRIT
+            THE IRRONPRIT
             <br />
             <span style={{ color: 'var(--gold)' }}>DIFFERENCE</span>
           </h2>
@@ -286,7 +286,7 @@ export default function AboutPage() {
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <p className="eyebrow">How we do it</p>
             <h2 className="display">
-              THE IRONPRIT
+              THE IRRONPRIT
               <br />
               <span className="accent">APPROACH</span>
             </h2>
@@ -337,7 +337,7 @@ export default function AboutPage() {
           </h2>
           <p className="founder-standard">Pritam M Sen</p>
           <p style={{ color: 'var(--muted)', marginBottom: 22 }}>
-            IRONPRIT was born from a simple belief — real transformation is built through proper
+            IRRONPRIT was born from a simple belief — real transformation is built through proper
             training, consistency, discipline and knowledge, not shortcuts.
           </p>
           <p style={{ color: 'var(--muted)', marginBottom: 28 }}>
@@ -347,7 +347,7 @@ export default function AboutPage() {
           </p>
           <div className="founder-sign">
             <strong>Pritam M Sen</strong>
-            <small>Founder &amp; Head Coach, IRONPRIT Fitness</small>
+            <small>Founder &amp; Head Coach, IRRONPRIT Fitness</small>
           </div>
         </div>
       </section>
@@ -373,7 +373,7 @@ export default function AboutPage() {
         <div className="container">
           <p className="eyebrow">Our promise</p>
           <h2 className="display" style={{ color: 'var(--white)', marginBottom: 18 }}>
-            THE IRONPRIT STANDARD
+            THE IRRONPRIT STANDARD
           </h2>
           <ul>
             {['Train Hard', 'Stay Consistent', 'Eat Right', 'Rest Well', 'Repeat'].map((s) => (
@@ -381,7 +381,7 @@ export default function AboutPage() {
             ))}
           </ul>
           <p style={{ color: 'rgba(255,255,255,.78)', maxWidth: 620, margin: '0 auto 16px' }}>
-            Simple principles. Exceptional results. This is what every IRONPRIT member commits to —
+            Simple principles. Exceptional results. This is what every IRRONPRIT member commits to —
             and what we commit right back to them.
           </p>
           <p className="standard-lines">Excellence is not an option. It is the standard.</p>
@@ -404,7 +404,7 @@ export default function AboutPage() {
         <div className="container" style={{ textAlign: 'center' }}>
           <p className="eyebrow">Ready?</p>
           <h2 className="display">
-            JOIN IRONPRIT
+            JOIN IRRONPRIT
             <br />
             TODAY
           </h2>

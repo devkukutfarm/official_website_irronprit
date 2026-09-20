@@ -22,7 +22,7 @@ export const classesData: Record<string, ClassData> = {
     photo: '/images/Characters/7.png',
     poster: '/images/Characters/7.png',
     lead: 'Build muscle, power and confidence with progressive lifting.',
-    benefits: 'Strength at IRONPRIT is built around proper technique, progressive overload and a plan that matches your goal. You will learn how to lift with purpose — not guesswork — so every session moves you forward.',
+    benefits: 'Strength at IRRONPRIT is built around proper technique, progressive overload and a plan that matches your goal. You will learn how to lift with purpose — not guesswork — so every session moves you forward.',
   },
   cardio: {
     id: 'cardio',
@@ -46,7 +46,7 @@ export const classesData: Record<string, ClassData> = {
     photo: '/images/Characters/9.png',
     poster: '/images/Characters/9.png',
     lead: 'High-intensity sessions for people who want faster results.',
-    benefits: 'Short, focused intervals that push your limits safely. HIIT at IRONPRIT is coached for form first, then intensity — so you get results without wrecking recovery.',
+    benefits: 'Short, focused intervals that push your limits safely. HIIT at IRRONPRIT is coached for form first, then intensity — so you get results without wrecking recovery.',
   },
   yoga: {
     id: 'yoga',
@@ -58,7 +58,7 @@ export const classesData: Record<string, ClassData> = {
     photo: '/images/Characters/10.png',
     poster: '/images/Characters/10.png',
     lead: 'Mobility, breath and recovery — 2 or 3 classes every week.',
-    benefits: 'Yoga at IRONPRIT is recovery with intent. Improve mobility, control your breath and stay injury-resistant so your lifting and conditioning keep progressing.',
+    benefits: 'Yoga at IRRONPRIT is recovery with intent. Improve mobility, control your breath and stay injury-resistant so your lifting and conditioning keep progressing.',
   },
   zumba: {
     id: 'zumba',

@@ -6,13 +6,13 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Classes',
   description:
-    'Strength training, cardio, HIIT, yoga, zumba and personal training â€” six structured classes designed for every fitness goal at IRONPRIT Baruipur.',
+    'Strength training, cardio, HIIT, yoga, zumba and personal training — six structured classes designed for every fitness goal at IRRONPRIT Baruipur.',
 }
 
 const classFaqs = [
   {
     q: 'Do I need to book a class in advance?',
-    a: 'Group classes do not require advance booking â€” just show up at the scheduled time. Personal Training sessions must be booked in advance via WhatsApp.',
+    a: 'Group classes do not require advance booking — just show up at the scheduled time. Personal Training sessions must be booked in advance via WhatsApp.',
   },
   {
     q: 'Are classes suitable for beginners?',
@@ -41,7 +41,7 @@ export default function ClassesPage() {
             <span className="accent">EVERY GOAL</span>
           </h1>
           <p className="lead" style={{ marginTop: 16 }}>
-            Six structured classes covering every angle of fitness â€” strength, conditioning,
+            Six structured classes covering every angle of fitness — strength, conditioning,
             mobility, and everything in between. All included in your membership.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function ClassesPage() {
             <span className="accent">BEGIN?</span>
           </h2>
           <p className="lead">
-            Walk in for a free trial session â€” pick any class and meet our coaches. No
+            Walk in for a free trial session — pick any class and meet our coaches. No
             commitment required.
           </p>
           <div className="actions" style={{ justifyContent: 'center', marginTop: 28 }}>
@@ -103,16 +103,46 @@ export default function ClassesPage() {
           <p className="eyebrow">Plans from</p>
           <div className="teaser-grid">
             {[
-              { label: 'Monthly', price: 'â‚¹999', featured: false },
-              { label: 'Quarterly', price: 'â‚¹2,799', featured: false },
-              { label: 'Half Yearly', price: 'â‚¹4,999', featured: true },
-              { label: 'Annual', price: 'â‚¹8,999', featured: false },
+              { label: 'Monthly', price: '1,999', featured: false },
+              { label: 'Quarterly', price: '3,999', featured: false },
+              { label: 'Half Yearly', price: '6,998', featured: true },
+              { label: 'Annual', price: '12,999', featured: false },
             ].map((p) => (
               <Link key={p.label} href="/packages" className={p.featured ? 'is-featured' : ''}>
                 <small>{p.label}</small>
-                <strong>{p.price}</strong>
+                <strong><span className="cur">₹</span>{p.price}</strong>
               </Link>
             ))}
+          </div>
+
+          <p className="eyebrow" style={{ marginTop: 52 }}>Zumba &amp; Yoga plans</p>
+          <div className="class-price-grid" style={{ maxWidth: '100%', margin: '18px 0 0' }}>
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-music" aria-hidden="true" /> Zumba
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
+            </article>
+            <article className="class-price-card">
+              <h3>
+                <i className="fa-solid fa-spa" aria-hidden="true" /> Yoga
+              </h3>
+              <div className="class-price-tier">
+                <span>2 classes / week</span>
+                <strong><span className="cur">₹</span>1,299</strong>
+              </div>
+              <div className="class-price-tier">
+                <span>3 classes / week</span>
+                <strong><span className="cur">₹</span>1,599</strong>
+              </div>
+            </article>
           </div>
         </div>
       </section>

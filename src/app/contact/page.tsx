@@ -1,28 +1,27 @@
-﻿import Link from 'next/link'
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Find IRONPRIT Fitness in Baruipur, West Bengal. Get directions, call us or drop us a message on WhatsApp.',
+    'Find IRRONPRIT Fitness in Baruipur, West Bengal. Get directions, call us or drop us a message on WhatsApp.',
 }
 
 export default function ContactPage() {
   return (
     <>
-      {/* â”€â”€ Hero â”€â”€ */}
+      {/* ── Hero ── */}
       <section className="about-hero" style={{ background: 'var(--green)' }}>
         <div className="about-hero-copy">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>Get in touch</p>
           <h1 className="display" style={{ color: 'var(--white)' }}>
             VISIT
             <br />
-            <span style={{ color: 'var(--gold)' }}>IRONPRIT</span>
+            <span style={{ color: 'var(--gold)' }}>IRRONPRIT</span>
             <br />
             FITNESS
           </h1>
           <p style={{ color: 'rgba(255,255,255,.78)', marginTop: 22, maxWidth: 440 }}>
-            We are in Baruipur, West Bengal. Come in for a free session or reach out on WhatsApp â€”
+            We are in Baruipur, West Bengal. Come in for a free session or reach out on WhatsApp —
             we reply fast.
           </p>
           <div className="actions" style={{ marginTop: 32 }}>
@@ -48,7 +47,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* â”€â”€ Branch info â”€â”€ */}
+      {/* ── Branch info ── */}
       <section className="contact-branches">
         <div className="container">
           <p className="eyebrow">Our location</p>
@@ -58,7 +57,7 @@ export default function ContactPage() {
           <div className="branch-grid">
             <div className="branch-card">
               <i className="fa-solid fa-location-dot" style={{ color: 'var(--gold)', fontSize: 28 }} />
-              <h3>IRONPRIT Fitness</h3>
+              <h3>IRRONPRIT Fitness</h3>
               <p>
                 Jogibattala Khasmallik, Near Baruipur Padmapukur More,
                 <br />
@@ -75,9 +74,9 @@ export default function ContactPage() {
               <div style={{ marginTop: 14, fontSize: 14 }}>
                 <strong>Gym Hours:</strong>
                 <br />
-                Mon â€“ Sat: 6:00 am â€“ 9:00 pm
+                Mon - Sat: 10:00 am - 10:00 pm
                 <br />
-                Sunday: 8:00 am â€“ 1:00 pm
+                Sunday: Closed
               </div>
               <a
                 href="https://wa.me/919903475355"
@@ -93,8 +92,8 @@ export default function ContactPage() {
             {/* Quick info cards */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {[
-                { icon: 'fa-solid fa-clock', title: 'Weekdays', sub: 'Mon â€“ Sat', time: '6:00 am â€“ 9:00 pm' },
-                { icon: 'fa-solid fa-sun', title: 'Sunday', sub: 'Limited hours', time: '8:00 am â€“ 1:00 pm' },
+                { icon: 'fa-solid fa-clock', title: 'Weekdays', sub: 'Mon - Sat', time: '10:00 am - 10:00 pm' },
+                { icon: 'fa-solid fa-sun', title: 'Sunday', sub: 'Weekly off', time: 'Closed' },
                 { icon: 'fa-solid fa-phone', title: 'Phone', sub: 'Call us anytime', time: '9903475355' },
                 { icon: 'fa-brands fa-whatsapp', title: 'WhatsApp', sub: 'Fastest reply', time: 'Usually within the hour' },
               ].map((item) => (
@@ -120,7 +119,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* â”€â”€ Map â”€â”€ */}
+      {/* ── Map ── */}
       <section className="contact-map" style={{ paddingTop: 0 }}>
         <div className="container">
           <p className="eyebrow">Get directions</p>
@@ -128,13 +127,13 @@ export default function ContactPage() {
             WE&apos;RE ON THE <span className="accent">MAP</span>
           </h2>
           <div className="map-frame">
-            {/* Replace src with actual IRONPRIT Google Maps embed URL */}
+            {/* Replace src with actual IRRONPRIT Google Maps embed URL */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117968.47591337767!2d88.30820815!3d22.358880!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a026f49cf2cfd1b%3A0x8edadb6dda6d7c8f!2sBaruipur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="IRONPRIT Fitness location"
+              title="IRRONPRIT Fitness location"
             />
           </div>
           <div className="contact-map-actions">
@@ -158,31 +157,27 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* â”€â”€ CTA â”€â”€ */}
-      <section className="standard" style={{ paddingBottom: 80 }}>
+      {/* ── CTA ── */}
+      <section className="about-cta">
         <div className="container">
-          <p className="eyebrow">Come train with us</p>
-          <h2 className="display" style={{ color: 'var(--white)', marginBottom: 18 }}>
-            FREE TRIAL.
+          <p className="eyebrow">Your journey starts here</p>
+          <h2 className="display">
+            Are you ready
             <br />
-            <span style={{ color: 'var(--gold)' }}>NO COMMITMENT.</span>
+            to become stronger?
           </h2>
-          <p style={{ maxWidth: 560, margin: '0 auto 28px', color: 'rgba(255,255,255,.78)' }}>
-            Walk in, meet the coaches, try a class. If you love it â€” pick a plan. If not â€” no
-            pressure. We just want you to experience what real coaching feels like.
-          </p>
-          <div className="actions" style={{ justifyContent: 'center' }}>
+          <div className="actions">
             <a
-              href="https://wa.me/919903475355"
+              className="btn btn-dark"
+              href="https://wa.me/919903475355?text=Hi%20IRONPRIT%2C%20I%20am%20ready%20to%20join."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn"
             >
-              <i className="fa-brands fa-whatsapp" /> Book Free Trial
+              Join IRRONPRIT
             </a>
-            <Link href="/packages" className="btn btn-ghost">
-              View Packages
-            </Link>
+            <a className="btn btn-ghost" href="tel:+919903475355">
+              Call 9903475355
+            </a>
           </div>
         </div>
       </section>
