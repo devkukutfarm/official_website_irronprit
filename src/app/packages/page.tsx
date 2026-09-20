@@ -5,16 +5,16 @@ export const metadata: Metadata = {
   title: 'Packages & Pricing',
   description:
     'IRRONPRIT membership plans — 1, 3, 6 and 12 months with up to 50% off and zero admission fee. Couple & referral offers available.',
-  alternates: { canonical: 'https://www.ironprit.com/packages' },
+  alternates: { canonical: 'https://www.irronprit.com/packages' },
   openGraph: {
     title: 'Gym Membership Plans & Pricing | IRRONPRIT Fitness',
     description:
       'Join IRRONPRIT Fitness — 1, 3, 6 and 12 month plans with up to 50% off, zero admission fee. Couple & referral offers available in Baruipur.',
-    url: 'https://www.ironprit.com/packages',
+    url: 'https://www.irronprit.com/packages',
     siteName: 'IRRONPRIT Fitness',
     images: [
       {
-        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        url: 'https://www.irronprit.com/images/ironprit-banner.jpg',
         width: 1200,
         height: 630,
         alt: 'IRRONPRIT Fitness Membership Plans — Baruipur',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Gym Membership Plans & Pricing | IRRONPRIT Fitness',
     description:
       'Join IRRONPRIT — 1, 3, 6 and 12 month plans with up to 50% off and zero admission fee.',
-    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+    images: ['https://www.irronprit.com/images/ironprit-banner.jpg'],
   },
 }
 

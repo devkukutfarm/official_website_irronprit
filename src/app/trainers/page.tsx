@@ -6,16 +6,16 @@ export const metadata: Metadata = {
   title: 'Our Trainers',
   description:
     'Meet the certified coaches at IRRONPRIT Fitness Baruipur. Professional trainers dedicated to your real transformation.',
-  alternates: { canonical: 'https://www.ironprit.com/trainers' },
+  alternates: { canonical: 'https://www.irronprit.com/trainers' },
   openGraph: {
     title: 'Our Trainers | IRRONPRIT Fitness Baruipur',
     description:
       'Certified professionals who take your progress personally. Every trainer at IRRONPRIT knows your name, your goal and your starting point.',
-    url: 'https://www.ironprit.com/trainers',
+    url: 'https://www.irronprit.com/trainers',
     siteName: 'IRRONPRIT Fitness',
     images: [
       {
-        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        url: 'https://www.irronprit.com/images/ironprit-banner.jpg',
         width: 1200,
         height: 630,
         alt: 'IRRONPRIT Fitness Trainers — Baruipur Gym',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Our Trainers | IRRONPRIT Fitness Baruipur',
     description:
       'Certified coaches dedicated to your real transformation. Meet the IRRONPRIT team.',
-    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+    images: ['https://www.irronprit.com/images/ironprit-banner.jpg'],
   },
 }
 

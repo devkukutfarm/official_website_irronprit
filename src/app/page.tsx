@@ -11,16 +11,16 @@ export const metadata: Metadata = {
   title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
   description:
     'IRRONPRIT Fitness — professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
-  alternates: { canonical: 'https://www.ironprit.com' },
+  alternates: { canonical: 'https://www.irronprit.com' },
   openGraph: {
     title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
     description:
       'Professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
-    url: 'https://www.ironprit.com',
+    url: 'https://www.irronprit.com',
     siteName: 'IRRONPRIT Fitness',
     images: [
       {
-        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        url: 'https://www.irronprit.com/images/ironprit-banner.jpg',
         width: 1200,
         height: 630,
         alt: 'IRRONPRIT Fitness — Gym in Baruipur, West Bengal',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
     description:
       'Professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training.',
-    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+    images: ['https://www.irronprit.com/images/ironprit-banner.jpg'],
   },
 }
 

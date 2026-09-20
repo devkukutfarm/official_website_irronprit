@@ -18,7 +18,7 @@ const oswald = Oswald({
   display: 'swap',
 })
 
-const SITE_URL = 'https://www.ironprit.com'
+const SITE_URL = 'https://www.irronprit.com'
 const SITE_NAME = 'IRRONPRIT Fitness'
 const DEFAULT_DESC =
   'IRRONPRIT Fitness is a professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training — real results through proper coaching.'

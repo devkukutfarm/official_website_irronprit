@@ -8,16 +8,16 @@ export const metadata: Metadata = {
   title: 'About Us',
   description:
     'IRRONPRIT Fitness was built on the belief that real transformation comes through proper training and consistency. Meet our founder and learn our story.',
-  alternates: { canonical: 'https://www.ironprit.com/about' },
+  alternates: { canonical: 'https://www.irronprit.com/about' },
   openGraph: {
     title: 'About IRRONPRIT Fitness | Our Story & Mission',
     description:
       'Built on the belief that real transformation comes through proper training and consistency. Meet our founder Pritam M Sen and learn the story of IRRONPRIT Baruipur.',
-    url: 'https://www.ironprit.com/about',
+    url: 'https://www.irronprit.com/about',
     siteName: 'IRRONPRIT Fitness',
     images: [
       {
-        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        url: 'https://www.irronprit.com/images/ironprit-banner.jpg',
         width: 1200,
         height: 630,
         alt: 'About IRRONPRIT Fitness — Baruipur Gym',
@@ -31,10 +31,9 @@ export const metadata: Metadata = {
     title: 'About IRRONPRIT Fitness | Our Story & Mission',
     description:
       'Meet our founder and learn how IRRONPRIT Fitness became Baruipur\'s most trusted gym.',
-    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+    images: ['https://www.irronprit.com/images/ironprit-banner.jpg'],
   },
 }
- 
 const certs = [
   {
     src: '/images/certification_1.jpg',

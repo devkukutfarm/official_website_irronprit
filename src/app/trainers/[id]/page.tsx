@@ -15,15 +15,15 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `${trainer.name} | Trainer`,
     description: trainer.lead,
-    alternates: { canonical: `https://www.ironprit.com/trainers/${id}` },
+    alternates: { canonical: `https://www.irronprit.com/trainers/${id}` },
     openGraph: {
       title: `${trainer.name} — Certified Trainer at IRRONPRIT Fitness`,
       description: trainer.lead,
-      url: `https://www.ironprit.com/trainers/${id}`,
+      url: `https://www.irronprit.com/trainers/${id}`,
       siteName: 'IRRONPRIT Fitness',
       images: [
         {
-          url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+          url: 'https://www.irronprit.com/images/ironprit-banner.jpg',
           width: 1200,
           height: 630,
           alt: `${trainer.name} — IRRONPRIT Fitness Trainer`,
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       card: 'summary_large_image',
       title: `${trainer.name} — Certified Trainer at IRRONPRIT Fitness`,
       description: trainer.lead,
-      images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+      images: ['https://www.irronprit.com/images/ironprit-banner.jpg'],
     },
   }
 }

@@ -7,16 +7,16 @@ export const metadata: Metadata = {
   title: 'Classes',
   description:
     'Strength training, cardio, HIIT, yoga, zumba and personal training — six structured classes designed for every fitness goal at IRRONPRIT Baruipur.',
-  alternates: { canonical: 'https://www.ironprit.com/classes' },
+  alternates: { canonical: 'https://www.irronprit.com/classes' },
   openGraph: {
     title: 'Gym Classes at IRRONPRIT Fitness | Baruipur',
     description:
       'Strength training, cardio, HIIT, yoga, zumba and personal training — six structured classes designed for every fitness goal at IRRONPRIT Baruipur.',
-    url: 'https://www.ironprit.com/classes',
+    url: 'https://www.irronprit.com/classes',
     siteName: 'IRRONPRIT Fitness',
     images: [
       {
-        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        url: 'https://www.irronprit.com/images/ironprit-banner.jpg',
         width: 1200,
         height: 630,
         alt: 'IRRONPRIT Fitness Classes — Baruipur Gym',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Gym Classes at IRRONPRIT Fitness | Baruipur',
     description:
       'Six structured classes: strength, cardio, HIIT, yoga, zumba and personal training — for every fitness goal.',
-    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+    images: ['https://www.irronprit.com/images/ironprit-banner.jpg'],
   },
 }
 

@@ -4,16 +4,16 @@ export const metadata: Metadata = {
   title: 'Contact Us',
   description:
     'Find IRRONPRIT Fitness in Baruipur, West Bengal. Get directions, call us or drop us a message on WhatsApp.',
-  alternates: { canonical: 'https://www.ironprit.com/contact' },
+  alternates: { canonical: 'https://www.irronprit.com/contact' },
   openGraph: {
     title: 'Contact IRRONPRIT Fitness | Gym in Baruipur',
     description:
       'Visit IRRONPRIT Fitness at Jogibattala Khasmallik, Baruipur, West Bengal. Call us, WhatsApp us or get directions. Mon–Sat 9 am–8 pm, Sun 10 am–2 pm.',
-    url: 'https://www.ironprit.com/contact',
+    url: 'https://www.irronprit.com/contact',
     siteName: 'IRRONPRIT Fitness',
     images: [
       {
-        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        url: 'https://www.irronprit.com/images/ironprit-banner.jpg',
         width: 1200,
         height: 630,
         alt: 'Contact IRRONPRIT Fitness — Baruipur Gym',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Contact IRRONPRIT Fitness | Gym in Baruipur',
     description:
       'Visit us at Jogibattala Khasmallik, Baruipur, West Bengal. Call or WhatsApp us anytime.',
-    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+    images: ['https://www.irronprit.com/images/ironprit-banner.jpg'],
   },
 }
 
