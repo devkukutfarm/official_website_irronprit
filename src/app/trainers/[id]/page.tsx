@@ -13,16 +13,39 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const trainer = trainersData[id]
   if (!trainer) return {}
   return {
-    title: `${trainer.name} | IRRONPRIT Fitness`,
+    title: `${trainer.name} | Trainer`,
     description: trainer.lead,
+    alternates: { canonical: `https://www.ironprit.com/trainers/${id}` },
+    openGraph: {
+      title: `${trainer.name} — Certified Trainer at IRRONPRIT Fitness`,
+      description: trainer.lead,
+      url: `https://www.ironprit.com/trainers/${id}`,
+      siteName: 'IRRONPRIT Fitness',
+      images: [
+        {
+          url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+          width: 1200,
+          height: 630,
+          alt: `${trainer.name} — IRRONPRIT Fitness Trainer`,
+        },
+      ],
+      locale: 'en_IN',
+      type: 'profile',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${trainer.name} — Certified Trainer at IRRONPRIT Fitness`,
+      description: trainer.lead,
+      images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+    },
   }
 }
 
 const certsByTrainer: Record<string, { src: string; title: string; issuer: string; width: number; height: number }[]> = {
   pritam: [
-    { src: '/images/certification_1.jpg', title: 'CPT Certification', issuer: 'Certified Personal Trainer', width: 600, height: 440 },
-    { src: '/images/certification_2.jpg', title: 'Nutrition Specialist', issuer: 'Sports Nutrition Certification', width: 600, height: 440 },
-    { src: '/images/certification_3.jpg', title: 'Strength & Conditioning', issuer: 'Advanced S&C Certificate', width: 600, height: 440 },
+    { src: '/images/certification_1.jpg', title: 'Diploma in Personal Training', issuer: 'Batch Topper of NIFS', width: 600, height: 440 },
+    { src: '/images/certification_2.jpg', title: 'Cardio Pulmonary Resuscitation', issuer: 'CPR Certification', width: 600, height: 440 },
+    { src: '/images/certification_3_new.jpg', title: 'Diploma in Sports, Fitness and Personal Training', issuer: '3rd Rank of OW', width: 600, height: 440 },
   ],
 }
 
@@ -99,7 +122,6 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
               <p className="eyebrow">Specialities</p>
               <ul className="check-list">
                 {[
-                  'Strength & Conditioning',
                   'Fat Loss Programming',
                   'Nutrition Coaching',
                   'Rehabilitation Training',
@@ -133,7 +155,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
       )}
 
       {/* ── Gallery ── */}
-      <section className="trainer-gallery">
+      {/* <section className="trainer-gallery">
         <div className="container">
           <p className="eyebrow">At IRRONPRIT</p>
           <h2 className="display" style={{ marginBottom: 18 }}>
@@ -145,7 +167,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Review ── */}
       <section className="reviews">

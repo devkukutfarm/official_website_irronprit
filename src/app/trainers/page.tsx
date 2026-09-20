@@ -6,6 +6,31 @@ export const metadata: Metadata = {
   title: 'Our Trainers',
   description:
     'Meet the certified coaches at IRRONPRIT Fitness Baruipur. Professional trainers dedicated to your real transformation.',
+  alternates: { canonical: 'https://www.ironprit.com/trainers' },
+  openGraph: {
+    title: 'Our Trainers | IRRONPRIT Fitness Baruipur',
+    description:
+      'Certified professionals who take your progress personally. Every trainer at IRRONPRIT knows your name, your goal and your starting point.',
+    url: 'https://www.ironprit.com/trainers',
+    siteName: 'IRRONPRIT Fitness',
+    images: [
+      {
+        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IRRONPRIT Fitness Trainers — Baruipur Gym',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Trainers | IRRONPRIT Fitness Baruipur',
+    description:
+      'Certified coaches dedicated to your real transformation. Meet the IRRONPRIT team.',
+    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+  },
 }
 
 export default function TrainersPage() {
@@ -76,7 +101,7 @@ export default function TrainersPage() {
             START?
           </h2>
           <p className="lead" style={{ margin: '12px auto 0' }}>
-            Book a free trial session and meet your coach before committing to any plan.
+            Book a session and meet your coach before committing to any plan.
           </p>
           <div className="actions" style={{ justifyContent: 'center', marginTop: 28 }}>
             <Link href="/packages" className="btn btn-dark">
@@ -88,7 +113,7 @@ export default function TrainersPage() {
               rel="noopener noreferrer"
               className="btn btn-ghost"
             >
-              <i className="fa-brands fa-whatsapp" /> Free Trial
+              <i className="fa-brands fa-whatsapp" /> Contact Us
             </a>
           </div>
         </div>

@@ -10,7 +10,32 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
   description:
-    'IRRONPRIT Fitness â€” professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
+    'IRRONPRIT Fitness — professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
+  alternates: { canonical: 'https://www.ironprit.com' },
+  openGraph: {
+    title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
+    description:
+      'Professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training. Real coaching. Real results.',
+    url: 'https://www.ironprit.com',
+    siteName: 'IRRONPRIT Fitness',
+    images: [
+      {
+        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IRRONPRIT Fitness — Gym in Baruipur, West Bengal',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IRRONPRIT Fitness | Gym in Baruipur, West Bengal',
+    description:
+      'Professional gym in Baruipur, West Bengal. Strength training, cardio, HIIT, yoga, zumba and personal training.',
+    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+  },
 }
 
 const homeFaqs = [
@@ -18,8 +43,8 @@ const homeFaqs = [
     q: 'What are your gym timings?',
     a: (
       <>
-        We are open Monday to Saturday from <strong>6 am to 9 pm</strong> and Sunday from{' '}
-        <strong>8 am to 1 pm</strong>. Public holiday timings may vary â€” check our{' '}
+        We are open Monday to Saturday from <strong>9 am to 8 pm</strong> and Sunday from{' '}
+        <strong>10 am to 2 pm</strong>. Public holiday timings may vary check our{' '}
         <a href="https://wa.me/919903475355">WhatsApp</a> for updates.
       </>
     ),
@@ -111,13 +136,13 @@ export default function HomePage() {
 
           {/* Social links */}
           <div className="hero-social">
-            <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/irronpritfitness.baruipur?stkn=cjUyMnBtcmcwdG43" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-instagram" />
             </a>
-            <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/share/1DYzeVuTd4/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-facebook-f" />
             </a>
-            <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@IrronpritFitness" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-youtube" />
             </a>
           </div>
@@ -142,7 +167,7 @@ export default function HomePage() {
             </h2>
             <p style={{ color: 'rgba(255,255,255,.78)', marginBottom: 28 }}>
               IRRONPRIT was built on the belief that real results come from proper coaching, not
-              shortcuts. Every session is designed to move you forward â€” whether you&apos;re a
+              shortcuts. Every session is designed to move you forward whether you&apos;re a
               beginner or a seasoned athlete.
             </p>
             <ul className="check-list">
@@ -274,7 +299,6 @@ export default function HomePage() {
                 'Clean, premium-maintained equipment',
                 'Flexible membership plans',
                 'No long-term lock-ins',
-                'Free trial for new members',
               ].map((item) => (
                 <li key={item}>
                   <i className="fa-solid fa-check" />
@@ -441,7 +465,7 @@ export default function HomePage() {
                   'Premium Gym Bag & Gym Essentials',
                   '2 Yoga Sessions / week',
                   '1 Zumba Session / week',
-                  '5 Steam Bath Sessions / month',
+                  '5 Steam Bath Sessions',
                   '5-Day Friend Trial Pass (valid 2 months)',
                 ],
               },
@@ -476,7 +500,7 @@ export default function HomePage() {
           <div className="refer-strip">
             <i className="fa-solid fa-gift" aria-hidden="true" />
             <span>
-              <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> +{' '}
+              <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> or{' '}
               <strong className="refer-accent">20% OFF</strong> on any package!
             </span>
             <a

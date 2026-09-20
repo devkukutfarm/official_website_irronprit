@@ -8,27 +8,52 @@ export const metadata: Metadata = {
   title: 'About Us',
   description:
     'IRRONPRIT Fitness was built on the belief that real transformation comes through proper training and consistency. Meet our founder and learn our story.',
+  alternates: { canonical: 'https://www.ironprit.com/about' },
+  openGraph: {
+    title: 'About IRRONPRIT Fitness | Our Story & Mission',
+    description:
+      'Built on the belief that real transformation comes through proper training and consistency. Meet our founder Pritam M Sen and learn the story of IRRONPRIT Baruipur.',
+    url: 'https://www.ironprit.com/about',
+    siteName: 'IRRONPRIT Fitness',
+    images: [
+      {
+        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'About IRRONPRIT Fitness — Baruipur Gym',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About IRRONPRIT Fitness | Our Story & Mission',
+    description:
+      'Meet our founder and learn how IRRONPRIT Fitness became Baruipur\'s most trusted gym.',
+    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+  },
 }
 
 const certs = [
   {
     src: '/images/certification_1.jpg',
-    title: 'CPT Certification',
-    issuer: 'Certified Personal Trainer',
+    title: 'Diploma in Personal Training',
+    issuer: 'Batch Topper of NIFS',
     width: 600,
     height: 440,
   },
   {
     src: '/images/certification_2.jpg',
-    title: 'Nutrition Specialist',
-    issuer: 'Sports Nutrition Certification',
+    title: 'Cardio Pulmonary Resuscitation',
+    issuer: 'CPR Certification',
     width: 600,
     height: 440,
   },
   {
     src: '/images/certification_3.jpg',
-    title: 'Strength & Conditioning',
-    issuer: 'Advanced S&C Certificate',
+    title: 'Diploma in Sports, Fitness and Personal Training',
+    issuer: '3rd Rank of OW',
     width: 600,
     height: 440,
   },
@@ -347,7 +372,7 @@ export default function AboutPage() {
           </p>
           <div className="founder-sign">
             <strong>Pritam M Sen</strong>
-            <small>Founder &amp; Head Coach, IRRONPRIT Fitness</small>
+            <small>Founder &amp; Head Coach, IRRONPRIT FITNESS</small>
           </div>
         </div>
       </section>

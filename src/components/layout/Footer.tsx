@@ -48,13 +48,13 @@ export default function Footer() {
               training, real coaching and a community that keeps you consistent.
             </p>
             <div className="socials" style={{ marginTop: 14 }}>
-              <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/irronpritfitness.baruipur?stkn=cjUyMnBtcmcwdG43" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-instagram" />
               </a>
-              <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/share/1DYzeVuTd4/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-facebook-f" />
               </a>
-              <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@IrronpritFitness" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-youtube" />
               </a>
               <a
@@ -109,9 +109,9 @@ export default function Footer() {
             <p style={{ marginTop: 16, fontSize: 14 }}>
               <strong style={{ color: 'var(--gold)' }}>Hours:</strong>
               <br />
-              Mon - Sat: 10:00 am - 10:00 pm
+              Mon - Sat: 9:00 am - 8:00 pm
               <br />
-              Sunday: Closed
+              Sunday: 10:00 am - 2:00 pm
             </p>
           </div>
         </div>

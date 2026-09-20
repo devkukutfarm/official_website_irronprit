@@ -4,6 +4,31 @@ export const metadata: Metadata = {
   title: 'Contact Us',
   description:
     'Find IRRONPRIT Fitness in Baruipur, West Bengal. Get directions, call us or drop us a message on WhatsApp.',
+  alternates: { canonical: 'https://www.ironprit.com/contact' },
+  openGraph: {
+    title: 'Contact IRRONPRIT Fitness | Gym in Baruipur',
+    description:
+      'Visit IRRONPRIT Fitness at Jogibattala Khasmallik, Baruipur, West Bengal. Call us, WhatsApp us or get directions. Mon–Sat 9 am–8 pm, Sun 10 am–2 pm.',
+    url: 'https://www.ironprit.com/contact',
+    siteName: 'IRRONPRIT Fitness',
+    images: [
+      {
+        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact IRRONPRIT Fitness — Baruipur Gym',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact IRRONPRIT Fitness | Gym in Baruipur',
+    description:
+      'Visit us at Jogibattala Khasmallik, Baruipur, West Bengal. Call or WhatsApp us anytime.',
+    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+  },
 }
 
 export default function ContactPage() {
@@ -74,9 +99,9 @@ export default function ContactPage() {
               <div style={{ marginTop: 14, fontSize: 14 }}>
                 <strong>Gym Hours:</strong>
                 <br />
-                Mon - Sat: 10:00 am - 10:00 pm
+                Mon - Sat: 9:00 am - 8:00 pm
                 <br />
-                Sunday: Closed
+                Sunday: 10:00 am - 2:00 pm
               </div>
               <a
                 href="https://wa.me/919903475355"
@@ -92,8 +117,8 @@ export default function ContactPage() {
             {/* Quick info cards */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {[
-                { icon: 'fa-solid fa-clock', title: 'Weekdays', sub: 'Mon - Sat', time: '10:00 am - 10:00 pm' },
-                { icon: 'fa-solid fa-sun', title: 'Sunday', sub: 'Weekly off', time: 'Closed' },
+                { icon: 'fa-solid fa-clock', title: 'Weekdays', sub: 'Mon - Sat', time: '9:00 am - 8:00 pm' },
+                { icon: 'fa-solid fa-sun', title: 'Sunday', sub: 'Open hours', time: '10:00 am - 2:00 pm' },
                 { icon: 'fa-solid fa-phone', title: 'Phone', sub: 'Call us anytime', time: '9903475355' },
                 { icon: 'fa-brands fa-whatsapp', title: 'WhatsApp', sub: 'Fastest reply', time: 'Usually within the hour' },
               ].map((item) => (

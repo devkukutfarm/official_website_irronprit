@@ -104,14 +104,14 @@ const jsonLd = {
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '06:00',
-      closes: '21:00',
+      opens: '09:00',
+      closes: '20:00',
     },
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: 'Sunday',
-      opens: '08:00',
-      closes: '13:00',
+      opens: '10:00',
+      closes: '14:00',
     },
   ],
   image: OG_IMAGE,
@@ -127,8 +127,9 @@ const jsonLd = {
     { '@type': 'LocationFeatureSpecification', name: 'Locker Room', value: true },
   ],
   sameAs: [
-    'https://www.instagram.com/ironprit',
-    'https://www.facebook.com/ironprit',
+    'https://www.instagram.com/irronpritfitness.baruipur',
+    'https://www.facebook.com/share/1DYzeVuTd4/',
+    'https://www.youtube.com/@IrronpritFitness',
   ],
 }
 

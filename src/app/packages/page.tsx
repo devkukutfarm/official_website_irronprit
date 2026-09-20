@@ -5,6 +5,31 @@ export const metadata: Metadata = {
   title: 'Packages & Pricing',
   description:
     'IRRONPRIT membership plans — 1, 3, 6 and 12 months with up to 50% off and zero admission fee. Couple & referral offers available.',
+  alternates: { canonical: 'https://www.ironprit.com/packages' },
+  openGraph: {
+    title: 'Gym Membership Plans & Pricing | IRRONPRIT Fitness',
+    description:
+      'Join IRRONPRIT Fitness — 1, 3, 6 and 12 month plans with up to 50% off, zero admission fee. Couple & referral offers available in Baruipur.',
+    url: 'https://www.ironprit.com/packages',
+    siteName: 'IRRONPRIT Fitness',
+    images: [
+      {
+        url: 'https://www.ironprit.com/images/ironprit-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IRRONPRIT Fitness Membership Plans — Baruipur',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gym Membership Plans & Pricing | IRRONPRIT Fitness',
+    description:
+      'Join IRRONPRIT — 1, 3, 6 and 12 month plans with up to 50% off and zero admission fee.',
+    images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
+  },
 }
 
 const plans = [
@@ -53,7 +78,7 @@ const plans = [
       'Premium Gym Bag & Gym Essentials',
       '2 Yoga Sessions / week',
       '1 Zumba Session / week',
-      '5 Steam Bath Sessions / month',
+      '5 Steam Bath Sessions',
       '5-Day Friend Trial Pass (valid 2 months)',
     ],
   },
@@ -135,7 +160,7 @@ export default function PackagesPage() {
           <div className="refer-strip">
             <i className="fa-solid fa-gift" aria-hidden="true" />
             <span>
-              <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> +{' '}
+              <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> or{' '}
               <strong className="refer-accent">20% OFF</strong> on any package!
             </span>
             <a
