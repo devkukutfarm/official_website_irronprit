@@ -155,7 +155,7 @@ export default function PackagesPage() {
               </article>
             ))}
           </div>
-
+   
           {/* Referral strip */}
           <div className="refer-strip">
             <i className="fa-solid fa-gift" aria-hidden="true" />

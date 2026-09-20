@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     images: ['https://www.ironprit.com/images/ironprit-banner.jpg'],
   },
 }
-
+ 
 const certs = [
   {
     src: '/images/certification_1.jpg',
