@@ -28,15 +28,15 @@ export default function PushSection() {
         style={{ backgroundImage: 'url(/images/Characters/4.png)' }}
       />
       <div className="container">
-        <p className="eyebrow" style={{ color: 'var(--gold)' }}>
+        <p className="eyebrow" style={{ color: 'var(--gold)' }} data-animate="fadeInUp">
           Your next level
         </p>
-        <h2 className="display" style={{ color: 'var(--white)', fontSize: 'clamp(42px,6.4vw,88px)' }}>
+        <h2 className="display" style={{ color: 'var(--white)', fontSize: 'clamp(42px,6.4vw,88px)' }} data-animate="fadeInLeft">
           PUSH<br />
           <span style={{ color: 'var(--red)' }}>YOUR</span><br />
           LIMITS
         </h2>
-        <div className="actions" style={{ marginTop: 36 }}>
+        <div className="actions" style={{ marginTop: 36 }} data-animate="fadeInUp">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScXW9WUCkpE8DMD4KNH-4P-a7j6iWlKjqvld0He3oZ1AiIORw/viewform?usp=publish-editor"
             target="_blank"

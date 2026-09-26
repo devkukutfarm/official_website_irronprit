@@ -82,7 +82,7 @@ export default function AboutPage() {
     <>
       {/* ── Hero ── */}
       <section className="about-hero">
-        <div className="about-hero-copy">
+        <div className="about-hero-copy" data-stagger="fadeInUp">
           <p className="eyebrow">Our story</p>
           <h1 className="display" style={{ color: 'var(--white)' }}>
             BUILT FOR
@@ -124,7 +124,7 @@ export default function AboutPage() {
       {/* ── Intro / Mission ── */}
       <section className="about-intro">
         <div className="container">
-          <div className="about-intro-head" style={{ margin: '0 auto 64px' }}>
+          <div className="about-intro-head" style={{ margin: '0 auto 64px' }} data-stagger="fadeInUp">
             <p className="eyebrow">What drives us</p>
             <h2 className="display">
               TRAIN RIGHT.
@@ -140,14 +140,14 @@ export default function AboutPage() {
           </div>
 
           <div className="about-who">
-            <div className="about-who-copy">
+            <div className="about-who-copy" data-stagger="fadeInUp">
               <p className="eyebrow">Who we are</p>
               <h2 className="display">
                 YOUR COACHES.
                 <br />
                 YOUR <span className="accent">COMMUNITY.</span>
               </h2>
-              <div className="about-who-meta">
+              <div className="about-who-meta" data-stagger="fadeInLeft">
                 {[
                   {
                     icon: 'fa-solid fa-dumbbell',
@@ -187,7 +187,7 @@ export default function AboutPage() {
                 Meet Our Trainers
               </Link>
             </div>
-            <div className="about-who-photo">
+            <div className="about-who-photo" data-animate="fadeInRight">
               <Image
                 src="/images/Characters/5.png"
                 alt="Training at IRONPRIT"
@@ -207,6 +207,7 @@ export default function AboutPage() {
             {/* Mission photo */}
             <div
               className="mvv-mission"
+              data-animate="fadeInLeft"
               style={{ backgroundImage: 'url(/images/Characters/7.png)', minHeight: 640, borderRadius: 28 }}
             >
               <div className="mvv-copy" style={{ padding: 36 }}>
@@ -222,7 +223,7 @@ export default function AboutPage() {
             </div>
 
             {/* Vision + Values */}
-            <div className="mvv-stack">
+            <div className="mvv-stack" data-stagger="fadeInUp">
               <div className="mvv-split" style={{ borderRadius: 28, overflow: 'hidden' }}>
                 <div className="mvv-copy" style={{ padding: '28px 24px' }}>
                   <h3>Our Vision</h3>
@@ -247,7 +248,7 @@ export default function AboutPage() {
               <div style={{ background: 'var(--gold)', borderRadius: 28, padding: '28px 24px' }}>
                 <h3>Our Values</h3>
                 <p className="mvv-line">Discipline. Honesty. Results.</p>
-                <ul className="value-list">
+                <ul className="value-list" data-stagger="fadeInUp">
                   {[
                     'Proper Technique Always',
                     'No Shortcuts',
@@ -275,13 +276,13 @@ export default function AboutPage() {
           style={{ backgroundImage: 'url(/images/Characters/13.png)' }}
         />
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why choose us</p>
-          <h2 className="display" style={{ color: 'var(--white)' }}>
+          <p className="eyebrow" style={{ color: 'var(--gold)' }} data-animate="fadeInUp">Why choose us</p>
+          <h2 className="display" style={{ color: 'var(--white)' }} data-animate="fadeInUp">
             THE IRRONPRIT
             <br />
             <span style={{ color: 'var(--gold)' }}>DIFFERENCE</span>
           </h2>
-          <div className="why-grid">
+          <div className="why-grid" data-stagger="fadeInUp">
             {[
               {
                 icon: 'fa-solid fa-user-check',
@@ -312,7 +313,7 @@ export default function AboutPage() {
       {/* ── Approach ── */}
       <section className="approach">
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <div style={{ textAlign: 'center', marginBottom: 48 }} data-stagger="fadeInUp">
             <p className="eyebrow">How we do it</p>
             <h2 className="display">
               THE IRRONPRIT
@@ -320,7 +321,7 @@ export default function AboutPage() {
               <span className="accent">APPROACH</span>
             </h2>
           </div>
-          <div className="approach-grid">
+          <div className="approach-grid" data-stagger="fadeInUp">
             {[
               {
                 step: '01 / Train',
@@ -355,9 +356,10 @@ export default function AboutPage() {
       <section className="founder">
         <div
           className="founder-photo"
+          data-animate="fadeIn"
           style={{ backgroundImage: 'url(/images/Characters/3.png)' }}
         />
-        <div className="founder-copy">
+        <div className="founder-copy" data-stagger="fadeInUp">
           <p className="eyebrow">The person behind it</p>
           <h2 className="display">
             MEET THE
@@ -384,13 +386,13 @@ export default function AboutPage() {
       {/* ── Certifications ── */}
       <section className="achievements">
         <div className="container">
-          <p className="eyebrow">Credentials</p>
-          <h2 className="display">
+          <p className="eyebrow" data-animate="fadeInUp">Credentials</p>
+          <h2 className="display" data-animate="fadeInUp">
             CERTIFIED.
             <br />
             <span className="accent">QUALIFIED.</span>
           </h2>
-          <p style={{ color: 'var(--muted)', marginTop: 8, maxWidth: 540 }}>
+          <p style={{ color: 'var(--muted)', marginTop: 8, maxWidth: 540 }} data-animate="fadeInUp">
             Our certifications back up what we promise in the gym.
           </p>
           <CertGrid certs={certs} />
@@ -400,28 +402,28 @@ export default function AboutPage() {
       {/* ── Standard ── */}
       <section className="standard">
         <div className="container">
-          <p className="eyebrow">Our promise</p>
-          <h2 className="display" style={{ color: 'var(--white)', marginBottom: 18 }}>
+          <p className="eyebrow" data-animate="fadeInUp">Our promise</p>
+          <h2 className="display" style={{ color: 'var(--white)', marginBottom: 18 }} data-animate="fadeInUp">
             THE IRRONPRIT STANDARD
           </h2>
-          <ul>
+          <ul data-stagger="zoomIn">
             {['Train Hard', 'Stay Consistent', 'Eat Right', 'Rest Well', 'Repeat'].map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>
-          <p style={{ color: 'rgba(255,255,255,.78)', maxWidth: 620, margin: '0 auto 16px' }}>
+          <p style={{ color: 'rgba(255,255,255,.78)', maxWidth: 620, margin: '0 auto 16px' }} data-animate="fadeInUp">
             Simple principles. Exceptional results. This is what every IRRONPRIT member commits to —
             and what we commit right back to them.
           </p>
-          <p className="standard-lines">Excellence is not an option. It is the standard.</p>
+          <p className="standard-lines" data-animate="fadeInUp">Excellence is not an option. It is the standard.</p>
         </div>
       </section>
 
       {/* ── FAQ ── */}
       <section className="faq">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--gold)' }}>Got questions?</p>
-          <h2 className="display" style={{ color: 'var(--white)' }}>
+          <p className="eyebrow" style={{ color: 'var(--gold)' }} data-animate="fadeInUp">Got questions?</p>
+          <h2 className="display" style={{ color: 'var(--white)' }} data-animate="fadeInUp">
             ABOUT <span style={{ color: 'var(--gold)' }}>FAQs</span>
           </h2>
           <FaqAccordion items={aboutFaqs} />
@@ -430,7 +432,7 @@ export default function AboutPage() {
 
       {/* ── CTA ── */}
       <section className="about-cta">
-        <div className="container" style={{ textAlign: 'center' }}>
+        <div className="container" style={{ textAlign: 'center' }} data-stagger="fadeInUp">
           <p className="eyebrow">Ready?</p>
           <h2 className="display">
             JOIN IRRONPRIT

@@ -89,7 +89,7 @@ export default function PackagesPage() {
     <>
       {/* ── Hero ── */}
       <section className="about-hero pkg-hero">
-        <div className="about-hero-copy">
+        <div className="about-hero-copy" data-stagger="fadeInUp">
           <p className="eyebrow">Membership</p>
           <h1 className="display" style={{ color: 'var(--white)' }}>
             Be physically
@@ -109,7 +109,7 @@ export default function PackagesPage() {
 
       {/* ── Intro ── */}
       <section className="pkg-intro" id="plans">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <h2 className="display">
             Choose the plan
             <br />that matches your <em>commitment</em>
@@ -128,12 +128,12 @@ export default function PackagesPage() {
       {/* ── Plans grid ── */}
       <section className="pricing pkg-pricing">
         <div className="container">
-          <div className="price-grid">
+          <div className="price-grid" data-stagger="fadeInUp">
             {plans.map((plan) => (
               <article key={plan.name} className={`price-card${plan.featured ? ' featured' : ''}`}>
                 <h3>{plan.name}</h3>
                 <div className="price-old">{plan.old}</div>
-                <div className="price-now"><span className="cur">₹</span>{plan.now.replace('₹', '')}</div>
+                <div className="price-now"><span className="cur">₹</span><span data-countup>{plan.now.replace('₹', '')}</span></div>
                 <span className="gift-label">Gifts included</span>
                 <ul>
                   {plan.features.map((f) => (
@@ -157,7 +157,7 @@ export default function PackagesPage() {
           </div>
    
           {/* Referral strip */}
-          <div className="refer-strip">
+          <div className="refer-strip" data-animate="fadeInUp">
             <i className="fa-solid fa-gift" aria-hidden="true" />
             <span>
               <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> or{' '}
@@ -174,13 +174,13 @@ export default function PackagesPage() {
           </div>
 
           {/* Special offers */}
-          <div className="special-head">
+          <div className="special-head" data-stagger="fadeInUp">
             <p className="eyebrow">More ways to save</p>
             <h2 className="display">Special Offers</h2>
           </div>
 
-          <article className="offer-box offer-couple offer-couple-wide">
-            <span className="offer-icon" aria-hidden="true">
+          <article className="offer-box offer-couple offer-couple-wide" data-animate="fadeInUp">
+            <span className="offer-icon" aria-hidden="true" data-animate="heartBeat" data-animate-delay="500">
               <i className="fa-solid fa-heart" />
             </span>
             <span className="offer-label">Couple / Dual Offer</span>
@@ -201,7 +201,7 @@ export default function PackagesPage() {
             </a>
           </article>
 
-          <div className="class-price-grid">
+          <div className="class-price-grid" data-stagger="fadeInUp">
             <article className="class-price-card">
               <h3>
                 <i className="fa-solid fa-music" aria-hidden="true" /> Zumba
@@ -234,7 +234,7 @@ export default function PackagesPage() {
 
       {/* ── Personal Training ── */}
       <section className="pkg-pt">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow">Personal training</p>
           <h2 className="display">
             Coaching with
@@ -258,13 +258,13 @@ export default function PackagesPage() {
       {/* ── Standard ── */}
       <section className="standard">
         <div className="container">
-          <p className="eyebrow">The IRRONPRIT Standard</p>
-          <ul>
+          <p className="eyebrow" data-animate="fadeInUp">The IRRONPRIT Standard</p>
+          <ul data-stagger="zoomIn">
             <li>No shortcuts.</li>
             <li>No false promises.</li>
             <li>No compromise on quality.</li>
           </ul>
-          <p className="standard-lines">
+          <p className="standard-lines" data-animate="fadeInUp">
             Train with purpose. Stay disciplined. Keep progressing.
           </p>
         </div>
@@ -272,7 +272,7 @@ export default function PackagesPage() {
 
       {/* ── CTA ── */}
       <section className="about-cta">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow">Your journey starts here</p>
           <h2 className="display">
             Are you ready

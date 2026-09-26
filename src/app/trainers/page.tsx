@@ -38,7 +38,7 @@ export default function TrainersPage() {
     <>
       {/* â”€â”€ Hero â”€â”€ */}
       <section className="about-hero hero-compact hero-banner" style={{ background: '#f6f3ea' }}>
-        <div className="about-hero-copy">
+        <div className="about-hero-copy" data-stagger="fadeInUp">
           <p className="eyebrow">Your coaches</p>
           <h1 className="display" style={{ color: 'var(--ink)' }}>
             MEET THE
@@ -62,13 +62,13 @@ export default function TrainersPage() {
       {/* â”€â”€ Trainers list â”€â”€ */}
       <section className="trainers-list">
         <div className="container">
-          <p className="eyebrow">Our coaches</p>
-          <h2 className="display" style={{ marginBottom: 32 }}>
+          <p className="eyebrow" data-animate="fadeInUp">Our coaches</p>
+          <h2 className="display" style={{ marginBottom: 32 }} data-animate="fadeInUp">
             CERTIFIED.
             <br />
             <span className="accent">DEDICATED.</span>
           </h2>
-          <div className="trainers-list-grid">
+          <div className="trainers-list-grid" data-stagger="fadeInUp">
             {trainersList.map((trainer) => (
               <Link key={trainer.id} href={`/trainers/${trainer.id}`} className="trainer-card" style={{ minHeight: 400 }}>
                 <div className="bg" style={{ backgroundImage: `url(${trainer.photo})` }} />
@@ -93,7 +93,7 @@ export default function TrainersPage() {
 
       {/* â”€â”€ CTA â”€â”€ */}
       <section className="about-cta">
-        <div className="container" style={{ textAlign: 'center' }}>
+        <div className="container" style={{ textAlign: 'center' }} data-stagger="fadeInUp">
           <p className="eyebrow">Train with the best</p>
           <h2 className="display">
             READY TO

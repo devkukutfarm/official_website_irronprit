@@ -11,7 +11,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <div>
+    <div data-stagger="fadeInUp">
       {items.map((item, i) => (
         <div key={i} className={`faq-item${open === i ? ' is-open' : ''}`}>
           <button className="faq-q" onClick={() => setOpen(open === i ? null : i)}>

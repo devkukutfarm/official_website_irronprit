@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter, Oswald } from 'next/font/google'
+import 'animate.css'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import WhatsAppFloat from '@/components/layout/WhatsAppFloat'
 import BackToTop from '@/components/layout/BackToTop'
+import ScrollReveal from '@/components/ui/ScrollReveal'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -135,8 +137,16 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
+    <html lang="en" className={`${inter.variable} ${oswald.variable}`} suppressHydrationWarning>
       <head>
+        {/* Scroll-reveal gate: hide reveal targets only when JS runs. Falls back
+            to fully visible content if the reveal script never boots. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.classList.add('js-reveal');setTimeout(function(){if(!window.__revealReady)document.documentElement.classList.remove('js-reveal')},4000)",
+          }}
+        />
         {/* Font Awesome 6 */}
         <link
           rel="stylesheet"
@@ -149,12 +159,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      {/* suppressHydrationWarning: browser extensions (e.g. Grammarly) inject
+          attributes on <body> before React hydrates. */}
+      <body suppressHydrationWarning>
         <Header />
         <main>{children}</main>
         <Footer />
         <WhatsAppFloat />
         <BackToTop />
+        <ScrollReveal />
       </body>
     </html>
   )

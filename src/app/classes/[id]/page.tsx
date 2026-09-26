@@ -27,7 +27,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
     <>
       {/* ── Hero ── */}
       <section className="class-hero">
-        <div className="class-hero-copy">
+        <div className="class-hero-copy" data-stagger="fadeInUp">
           <p className="eyebrow">{cls.intensity} intensity · {cls.time}</p>
           <h1 className="display">{cls.title.toUpperCase()}</h1>
           <p className="lead">{cls.lead}</p>
@@ -55,7 +55,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
       {/* ── Stats ── */}
       <section className="class-stats">
         <div className="container">
-          <div className="stats-row">
+          <div className="stats-row" data-stagger="fadeInUp">
             {[
               { label: 'Intensity', value: cls.intensity },
               { label: 'Duration', value: cls.time },
@@ -73,7 +73,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
 
       {/* ── Video ── */}
       <section className="class-video" id="class-video">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow">See it in action</p>
           <h2 className="display">{cls.title.toUpperCase()} AT IRRONPRIT</h2>
           <p className="video-note">A snapshot of what a typical session looks like.</p>
@@ -87,7 +87,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
 
       {/* ── Benefits ── */}
       <section className="class-benefits">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>What you gain</p>
           <h2 className="display" style={{ color: 'var(--white)' }}>
             WHY <span style={{ color: 'var(--gold)' }}>{cls.title.toUpperCase()}</span>
@@ -109,11 +109,11 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
       {/* ── Trainers ── */}
       <section className="class-trainers trainers">
         <div className="container">
-          <p className="eyebrow">Coached by</p>
-          <h2 className="display">
+          <p className="eyebrow" data-animate="fadeInUp">Coached by</p>
+          <h2 className="display" data-animate="fadeInUp">
             YOUR <span className="accent">COACHES</span>
           </h2>
-          <div className="trainer-grid class-trainer-grid">
+          <div className="trainer-grid class-trainer-grid" data-stagger="fadeInUp">
             {trainersList.map((trainer) => (
               <Link key={trainer.id} href={`/trainers/${trainer.id}`} className="trainer-card">
                 <div
@@ -133,7 +133,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
       {/* ── Membership card ── */}
       <section className="class-member">
         <div className="container">
-          <div className="class-member-grid">
+          <div className="class-member-grid" data-stagger="fadeInUp">
             <div>
               <p className="eyebrow">Ready to train?</p>
               <h2 className="display">
@@ -161,7 +161,7 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
             </div>
             <div style={{ background: 'var(--gold)', borderRadius: 24, padding: 32 }}>
               <p className="eyebrow" style={{ color: 'var(--ink)' }}>All plans include</p>
-              <ul className="check-list">
+              <ul className="check-list" data-stagger="fadeInLeft">
                 {[
                   `${cls.title} classes`,
                   'All other group classes',
@@ -186,11 +186,11 @@ export default async function ClassDetailPage({ params }: { params: Promise<{ id
       {/* ── More classes ── */}
       <section style={{ paddingBottom: 90, background: '#f6f3ea' }}>
         <div className="container">
-          <p className="eyebrow">Explore more</p>
-          <h2 className="display" style={{ marginBottom: 28 }}>
+          <p className="eyebrow" data-animate="fadeInUp">Explore more</p>
+          <h2 className="display" style={{ marginBottom: 28 }} data-animate="fadeInUp">
             OTHER <span className="accent">CLASSES</span>
           </h2>
-          <div className="classes-grid" style={{ gridTemplateColumns: 'repeat(3,1fr)' }}>
+          <div className="classes-grid" style={{ gridTemplateColumns: 'repeat(3,1fr)' }} data-stagger="fadeInUp">
             {classesList
               .filter((c) => c.id !== id)
               .slice(0, 3)

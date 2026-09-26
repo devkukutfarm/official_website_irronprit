@@ -16,7 +16,7 @@ export default function CertGrid({ certs }: { certs: Cert[] }) {
 
   return (
     <>
-      <div className="cert-grid">
+      <div className="cert-grid" data-stagger="zoomIn">
         {certs.map((cert, i) => (
           <button key={i} className="cert-frame" onClick={() => setLightbox(cert)}>
             <span className="cert-mat">

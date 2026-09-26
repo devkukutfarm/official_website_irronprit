@@ -1003,3 +1003,91 @@ body.lightbox-open { overflow: hidden; }
   .map-frame { aspect-ratio: 4/5; min-height: 280px; }
   .trainer-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Motion: Animate.css scroll reveals + micro-interactions ──
+   Reveal targets use the independent `translate` / `scale` properties rather
+   than `transform`, so existing transforms (featured price card, skewed
+   underline, rotated wave shapes) are never overridden mid-animation. */
+:root {
+  --animate-duration: 0.9s;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.js-reveal [data-animate]:not([data-revealed]),
+html.js-reveal [data-stagger] > :not([data-revealed]) { opacity: 0; }
+
+.animate__animated.animate__fadeInUp { animation-name: ip-fadeInUp; animation-timing-function: var(--ease-out-expo); }
+.animate__animated.animate__fadeInLeft { animation-name: ip-fadeInLeft; animation-timing-function: var(--ease-out-expo); }
+.animate__animated.animate__fadeInRight { animation-name: ip-fadeInRight; animation-timing-function: var(--ease-out-expo); }
+.animate__animated.animate__zoomIn { animation-name: ip-zoomIn; animation-timing-function: var(--ease-out-expo); }
+.animate__animated.animate__fadeIn { --animate-duration: 1.4s; animation-timing-function: ease-out; }
+
+@keyframes ip-fadeInUp { from { opacity: 0; translate: 0 34px; } to { opacity: 1; translate: 0 0; } }
+@keyframes ip-fadeInLeft { from { opacity: 0; translate: -44px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes ip-fadeInRight { from { opacity: 0; translate: 44px 0; } to { opacity: 1; translate: 0 0; } }
+@keyframes ip-zoomIn { from { opacity: 0; scale: 0.82; } to { opacity: 1; scale: 1; } }
+
+/* Hero word cycle: blur-rise in, underline sweeps from the left */
+.hero-word.is-cycling { animation: ip-word-in 0.7s var(--ease-out-expo) both; }
+.hero-word.is-cycling::after {
+  transform-origin: left center;
+  animation: ip-underline 0.8s 0.12s var(--ease-out-expo) both;
+}
+@keyframes ip-word-in {
+  from { opacity: 0; translate: 0 0.35em; filter: blur(8px); }
+  to { opacity: 1; translate: 0 0; filter: blur(0); }
+}
+@keyframes ip-underline { from { scale: 0 1; } to { scale: 1 1; } }
+
+/* Buttons: gentle lift + light sweep on hover */
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn::before {
+  content: "";
+  position: absolute; top: 0; bottom: 0; left: 0;
+  width: 45%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent);
+  transform: skewX(-20deg);
+  translate: -160% 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.btn:hover { translate: 0 -2px; box-shadow: 0 12px 26px rgba(5,42,33,.18); }
+.btn:hover::before { translate: 330% 0; transition: translate 0.75s var(--ease-out-expo); }
+
+/* Class cards: slow image push-in, arrow nudge */
+.class-card img { transition: scale 0.9s var(--ease-out-expo); }
+.class-card:hover img { scale: 1.07; }
+.class-card .learn i { display: inline-block; transition: translate 0.3s ease; }
+.class-card:hover .learn i { translate: 5px 0; }
+
+/* Price cards: lift on hover */
+.price-card { transition: translate 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo); }
+.price-card:hover { translate: 0 -6px; box-shadow: 0 28px 60px rgba(5,42,33,.18); }
+
+/* Attention rings with idle time between beats (less nagging than a loop) */
+.whatsapp-float { animation: ip-ring-green 3.4s ease-out 2s infinite; }
+.price-card.featured .btn { animation: ip-ring-gold 3.4s ease-out 1s infinite; }
+@keyframes ip-ring-green {
+  0% { box-shadow: var(--shadow), 0 0 0 0 rgba(37,211,102,.55); }
+  35%, 100% { box-shadow: var(--shadow), 0 0 0 18px rgba(37,211,102,0); }
+}
+@keyframes ip-ring-gold {
+  0% { box-shadow: 0 0 0 0 rgba(244,184,60,.6); }
+  35%, 100% { box-shadow: 0 0 0 14px rgba(244,184,60,0); }
+}
+
+/* FAQ answer eases open */
+.faq-item.is-open .faq-a { animation: ip-fadeInUp 0.45s var(--ease-out-expo); }
+.faq-item { transition: background 0.25s ease, border-color 0.25s ease; }
+.faq-item:hover, .faq-item.is-open { background: rgba(255,255,255,.09); border-color: rgba(244,184,60,.28); }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal [data-animate]:not([data-revealed]),
+  html.js-reveal [data-stagger] > :not([data-revealed]) { opacity: 1; }
+  .hero-word.is-cycling, .hero-word.is-cycling::after,
+  .whatsapp-float, .price-card.featured .btn,
+  .faq-item.is-open .faq-a { animation: none; }
+  .btn::before { display: none; }
+  .btn:hover, .price-card:hover { translate: none; }
+  .class-card:hover img { scale: 1; }
+}

@@ -67,7 +67,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
     <>
       {/* ── Hero split ── */}
       <section className="about-hero hero-compact hero-stack" style={{ background: '#031912' }}>
-        <div className="about-hero-copy">
+        <div className="about-hero-copy" data-stagger="fadeInUp">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>{trainer.role}</p>
           <h1 className="display" style={{ color: 'var(--white)' }}>
             {trainer.name.toUpperCase()}
@@ -101,7 +101,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
       {/* ── Bio ── */}
       <section className="founder trainer-bio" style={{ display: 'block', background: 'var(--white)', padding: '90px 0' }}>
         <div className="container">
-          <div className="class-member-grid">
+          <div className="class-member-grid" data-stagger="fadeInUp">
             <div>
               <p className="eyebrow">About {trainer.name.split(' ')[0]}</p>
               <h2 className="display">
@@ -125,7 +125,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
             </div>
             <div style={{ background: 'var(--gold)', borderRadius: 24, padding: 32 }}>
               <p className="eyebrow">Specialities</p>
-              <ul className="check-list">
+              <ul className="check-list" data-stagger="fadeInLeft">
                 {[
                   'Fat Loss Programming',
                   'Nutrition Coaching',
@@ -148,8 +148,8 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
       {certs.length > 0 && (
         <section className="achievements">
           <div className="container">
-            <p className="eyebrow">Credentials</p>
-            <h2 className="display">
+            <p className="eyebrow" data-animate="fadeInUp">Credentials</p>
+            <h2 className="display" data-animate="fadeInUp">
               CERTIFIED.
               <br />
               <span className="accent">QUALIFIED.</span>
@@ -177,7 +177,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
       {/* ── Review ── */}
       <section className="reviews">
         <div className="container reviews-grid">
-          <div>
+          <div data-animate="fadeInLeft">
             <img
               src={trainer.photo}
               alt={trainer.name}
@@ -185,7 +185,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
               style={{ borderRadius: 24, objectFit: 'cover', width: '100%', maxWidth: 360, aspectRatio: '1' }}
             />
           </div>
-          <div>
+          <div data-stagger="fadeInUp">
             <p className="eyebrow" style={{ color: 'var(--gold)' }}>What members say</p>
             <h2 className="display" style={{ color: 'var(--white)' }}>
               REAL RESULTS,
@@ -215,7 +215,7 @@ export default async function TrainerDetailPage({ params }: { params: Promise<{ 
 
       {/* ── CTA ── */}
       <section className="about-cta">
-        <div className="container" style={{ textAlign: 'center' }}>
+        <div className="container" style={{ textAlign: 'center' }} data-stagger="fadeInUp">
           <p className="eyebrow">Book a session</p>
           <h2 className="display">
             TRAIN WITH

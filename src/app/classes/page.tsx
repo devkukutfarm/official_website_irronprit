@@ -58,7 +58,7 @@ export default function ClassesPage() {
     <>
       {/* â”€â”€ Hero â”€â”€ */}
       <section className="classes-hero">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow">What we offer</p>
           <h1 className="display">
             CLASSES FOR
@@ -75,7 +75,7 @@ export default function ClassesPage() {
       {/* â”€â”€ Grid â”€â”€ */}
       <section className="classes-grid-wrap">
         <div className="container">
-          <div className="classes-grid">
+          <div className="classes-grid" data-stagger="fadeInUp">
             {classesList.map((cls) => (
               <Link key={cls.id} href={`/classes/${cls.id}`} className="class-card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -95,7 +95,7 @@ export default function ClassesPage() {
 
       {/* â”€â”€ Join CTA â”€â”€ */}
       <section className="classes-join">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow">Start today</p>
           <h2 className="display">
             READY TO
@@ -125,8 +125,8 @@ export default function ClassesPage() {
       {/* â”€â”€ Price teaser â”€â”€ */}
       <section className="classes-teaser">
         <div className="container">
-          <p className="eyebrow">Plans from</p>
-          <div className="teaser-grid">
+          <p className="eyebrow" data-animate="fadeInUp">Plans from</p>
+          <div className="teaser-grid" data-stagger="fadeInUp">
             {[
               { label: 'Monthly', price: '1,999', featured: false },
               { label: 'Quarterly', price: '3,999', featured: false },
@@ -135,13 +135,13 @@ export default function ClassesPage() {
             ].map((p) => (
               <Link key={p.label} href="/packages" className={p.featured ? 'is-featured' : ''}>
                 <small>{p.label}</small>
-                <strong><span className="cur">₹</span>{p.price}</strong>
+                <strong><span className="cur">₹</span><span data-countup>{p.price}</span></strong>
               </Link>
             ))}
           </div>
 
-          <p className="eyebrow" style={{ marginTop: 52 }}>Zumba &amp; Yoga plans</p>
-          <div className="class-price-grid" style={{ maxWidth: '100%', margin: '18px 0 0' }}>
+          <p className="eyebrow" style={{ marginTop: 52 }} data-animate="fadeInUp">Zumba &amp; Yoga plans</p>
+          <div className="class-price-grid" style={{ maxWidth: '100%', margin: '18px 0 0' }} data-stagger="fadeInUp">
             <article className="class-price-card">
               <h3>
                 <i className="fa-solid fa-music" aria-hidden="true" /> Zumba
@@ -175,8 +175,8 @@ export default function ClassesPage() {
       {/* â”€â”€ FAQ â”€â”€ */}
       <section className="faq">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--gold)' }}>Common questions</p>
-          <h2 className="display" style={{ color: 'var(--white)' }}>
+          <p className="eyebrow" style={{ color: 'var(--gold)' }} data-animate="fadeInUp">Common questions</p>
+          <h2 className="display" style={{ color: 'var(--white)' }} data-animate="fadeInUp">
             CLASSES <span style={{ color: 'var(--gold)' }}>FAQs</span>
           </h2>
           <FaqAccordion items={classFaqs} />

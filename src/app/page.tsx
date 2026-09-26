@@ -77,18 +77,18 @@ export default function HomePage() {
       {/* â”€â”€ Hero â”€â”€ */}
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Baruipur&apos;s Fitness Hub</p>
-          <h1 className="display">
+          <p className="eyebrow" data-animate="fadeInUp">Baruipur&apos;s Fitness Hub</p>
+          <h1 className="display" data-animate="fadeInUp">
             BUILD YOUR
             <br />
             <HeroWordCycle />
             <br />
             EVERY DAY
           </h1>
-          <p className="hero-tagline">
+          <p className="hero-tagline" data-animate="fadeInUp">
             Real transformation through proper training, consistency and discipline.
           </p>
-          <div className="actions" style={{ marginTop: 36 }}>
+          <div className="actions" style={{ marginTop: 36 }} data-animate="fadeInUp">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScXW9WUCkpE8DMD4KNH-4P-a7j6iWlKjqvld0He3oZ1AiIORw/viewform?usp=publish-editor"
               target="_blank"
@@ -113,7 +113,7 @@ export default function HomePage() {
           />
 
           {/* Book card */}
-          <div className="book-card">
+          <div className="book-card" data-animate="fadeInUp" data-animate-delay="350">
             <h3>Book a Free Trial</h3>
             <div className="book-card-row">
               <Image
@@ -140,7 +140,7 @@ export default function HomePage() {
           </div>
 
           {/* Social links */}
-          <div className="hero-social">
+          <div className="hero-social" data-stagger="zoomIn">
             <a href="https://www.instagram.com/irronpritfitness.baruipur?stkn=cjUyMnBtcmcwdG43" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-instagram" />
             </a>
@@ -164,18 +164,18 @@ export default function HomePage() {
 
         <div className="container intro-grid">
           <div>
-            <p className="eyebrow" style={{ color: 'var(--gold)' }}>Why IRRONPRIT</p>
-            <h2 className="display" style={{ color: 'var(--white)' }}>
+            <p className="eyebrow" style={{ color: 'var(--gold)' }} data-animate="fadeInUp">Why IRRONPRIT</p>
+            <h2 className="display" style={{ color: 'var(--white)' }} data-animate="fadeInUp">
               MORE THAN A GYM.
               <br />
               <span style={{ color: 'var(--gold)' }}>A WAY OF LIFE.</span>
             </h2>
-            <p style={{ color: 'rgba(255,255,255,.78)', marginBottom: 28 }}>
+            <p style={{ color: 'rgba(255,255,255,.78)', marginBottom: 28 }} data-animate="fadeInUp">
               IRRONPRIT was built on the belief that real results come from proper coaching, not
               shortcuts. Every session is designed to move you forward whether you&apos;re a
               beginner or a seasoned athlete.
             </p>
-            <ul className="check-list">
+            <ul className="check-list" data-stagger="fadeInLeft">
               {[
                 'Professional coaching at every level',
                 'Structured programs that actually work',
@@ -188,7 +188,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <div className="actions" style={{ marginTop: 32 }}>
+            <div className="actions" style={{ marginTop: 32 }} data-animate="fadeInUp">
               <Link href="/about" className="btn">
                 Our Story
               </Link>
@@ -198,7 +198,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="intro-photos">
+          <div className="intro-photos" data-stagger="fadeInRight">
             <Image
               src="/images/Characters/5.png"
               alt="Athlete training"
@@ -228,14 +228,14 @@ export default function HomePage() {
         <div className="container">
           <div className="section-head">
             <div>
-              <p className="eyebrow">What we offer</p>
-              <h2 className="display">
+              <p className="eyebrow" data-animate="fadeInUp">What we offer</p>
+              <h2 className="display" data-animate="fadeInUp">
                 CLASSES FOR
                 <br />
                 EVERY <span className="accent">GOAL</span>
               </h2>
             </div>
-            <div>
+            <div data-animate="fadeInUp">
               <p className="lead">
                 Six structured classes designed to cover every angle of your fitness — strength,
                 conditioning, mobility and everything in between.
@@ -248,7 +248,7 @@ export default function HomePage() {
         </div>
 
         <div className="container-wide">
-          <div className="class-track">
+          <div className="class-track" data-stagger="fadeInUp">
             {classesList.map((cls) => (
               <Link key={cls.id} href={`/classes/${cls.id}`} className="class-card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -270,23 +270,24 @@ export default function HomePage() {
       <section className="benefits">
         <div
           className="benefits-photo"
+          data-animate="fadeIn"
           style={{ backgroundImage: 'url(/images/Characters/13.png)' }}
         />
         <div className="benefits-copy">
-          <p className="eyebrow">Why choose us</p>
-          <h2 className="display">
+          <p className="eyebrow" data-animate="fadeInUp">Why choose us</p>
+          <h2 className="display" data-animate="fadeInUp">
             REAL RESULTS.
             <br />
             REAL <span className="accent">COACHES.</span>
           </h2>
 
-          <div className="badge-35">
-            <strong>5+</strong>
+          <div className="badge-35" data-animate="zoomIn" data-animate-delay="250">
+            <strong data-countup>5+</strong>
             <span>Years of coaching</span>
           </div>
 
           <div className="benefits-lists">
-            <ul className="check-list">
+            <ul className="check-list" data-stagger="fadeInUp">
               {[
                 'Expert trainers on floor daily',
                 'Progress tracking every session',
@@ -299,7 +300,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <ul className="check-list">
+            <ul className="check-list" data-stagger="fadeInUp">
               {[
                 'Clean, premium-maintained equipment',
                 'Flexible membership plans',
@@ -313,7 +314,7 @@ export default function HomePage() {
             </ul>
           </div>
 
-          <div className="actions" style={{ marginTop: 32 }}>
+          <div className="actions" style={{ marginTop: 32 }} data-animate="fadeInUp">
             <Link href="/packages" className="btn">
               View Packages
             </Link>
@@ -326,14 +327,14 @@ export default function HomePage() {
         <div className="container">
           <div className="section-head">
             <div>
-              <p className="eyebrow">Who coaches you</p>
-              <h2 className="display">
+              <p className="eyebrow" data-animate="fadeInUp">Who coaches you</p>
+              <h2 className="display" data-animate="fadeInUp">
                 MEET YOUR
                 <br />
                 <span className="accent">TRAINERS</span>
               </h2>
             </div>
-            <div>
+            <div data-animate="fadeInUp">
               <p className="lead">
                 Certified, experienced coaches who take your progress personally.
               </p>
@@ -343,7 +344,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="trainer-grid">
+          <div className="trainer-grid" data-stagger="fadeInUp">
             {trainersList.map((trainer) => (
               <Link key={trainer.id} href={`/trainers/${trainer.id}`} className="trainer-card">
                 <div
@@ -366,7 +367,7 @@ export default function HomePage() {
       {/* â”€â”€ Reviews â”€â”€ */}
       <section className="reviews">
         <div className="container reviews-grid">
-          <div>
+          <div data-animate="fadeInLeft">
             <p className="eyebrow" style={{ color: 'var(--gold)' }}>Member stories</p>
             <Image
               src="/images/Characters/4.png"
@@ -377,18 +378,18 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <h2 className="display" style={{ color: 'var(--white)' }}>
+            <h2 className="display" style={{ color: 'var(--white)' }} data-animate="fadeInUp">
               REAL PEOPLE,
               <br />
               <span style={{ color: 'var(--gold)' }}>REAL RESULTS</span>
             </h2>
-            <span className="sample-note">Member review</span>
-            <p className="quote">
+            <span className="sample-note" data-animate="fadeInUp">Member review</span>
+            <p className="quote" data-animate="fadeInUp">
               &ldquo;I had tried multiple gyms before IRRONPRIT but always quit within a month. Here the
               trainers actually pay attention to your form, track your progress and push you to be
               consistent. Three months in, I&apos;m stronger than I&apos;ve ever been.&rdquo;
             </p>
-            <div className="quote-meta">
+            <div className="quote-meta" data-animate="fadeInUp">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/Characters/3.png"
@@ -409,7 +410,7 @@ export default function HomePage() {
       {/* â”€â”€ Pricing â”€â”€ */}
       <section className="pricing">
         <div className="container">
-          <div className="pricing-head">
+          <div className="pricing-head" data-stagger="fadeInUp">
             <p className="eyebrow">Our plans</p>
             <h2 className="display">
               Be physically fit
@@ -424,12 +425,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="promo-strip">
+          <div className="promo-strip" data-animate="zoomIn">
             Flat <strong>50% OFF</strong> + <strong>Zero Admission Fee</strong> on quarterly,
             half-yearly and yearly plans. Monthly members also get zero admission fee.
           </div>
 
-          <div className="price-grid">
+          <div className="price-grid" data-stagger="fadeInUp">
             {[
               {
                 name: '1 Month Pro',
@@ -478,7 +479,7 @@ export default function HomePage() {
               <article key={plan.name} className={`price-card${plan.featured ? ' featured' : ''}`}>
                 <h3>{plan.name}</h3>
                 <div className="price-old">{plan.old}</div>
-                <div className="price-now"><span className="cur">₹</span>{plan.now.replace('₹', '')}</div>
+                <div className="price-now"><span className="cur">₹</span><span data-countup>{plan.now.replace('₹', '')}</span></div>
                 <span className="gift-label">Gifts included</span>
                 <ul>
                   {plan.features.map((f) => (
@@ -502,7 +503,7 @@ export default function HomePage() {
           </div>
 
           {/* Referral strip */}
-          <div className="refer-strip">
+          <div className="refer-strip" data-animate="fadeInUp">
             <i className="fa-solid fa-gift" aria-hidden="true" />
             <span>
               <em>Refer a friend</em> &amp; get <strong>1 Month Free</strong> or{' '}
@@ -519,13 +520,13 @@ export default function HomePage() {
           </div>
 
           {/* Special offers */}
-          <div className="special-head">
+          <div className="special-head" data-stagger="fadeInUp">
             <p className="eyebrow">More ways to save</p>
             <h2 className="display">Special Offers</h2>
           </div>
 
-          <article className="offer-box offer-couple offer-couple-wide">
-            <span className="offer-icon" aria-hidden="true">
+          <article className="offer-box offer-couple offer-couple-wide" data-animate="fadeInUp">
+            <span className="offer-icon" aria-hidden="true" data-animate="heartBeat" data-animate-delay="500">
               <i className="fa-solid fa-heart" />
             </span>
             <span className="offer-label">Couple / Dual Offer</span>
@@ -546,7 +547,7 @@ export default function HomePage() {
             </a>
           </article>
 
-          <div className="class-price-grid">
+          <div className="class-price-grid" data-stagger="fadeInUp">
             <article className="class-price-card">
               <h3>
                 <i className="fa-solid fa-music" aria-hidden="true" /> Zumba
@@ -579,7 +580,7 @@ export default function HomePage() {
 
       {/* â”€â”€ Mid CTA â”€â”€ */}
       <section className="mid-cta">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow">Take the first step</p>
           <h2 className="display">
             YOUR JOURNEY STARTS
@@ -608,8 +609,8 @@ export default function HomePage() {
       {/* â”€â”€ FAQ â”€â”€ */}
       <section className="faq">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--gold)' }}>Common questions</p>
-          <h2 className="display" style={{ color: 'var(--white)' }}>
+          <p className="eyebrow" style={{ color: 'var(--gold)' }} data-animate="fadeInUp">Common questions</p>
+          <h2 className="display" style={{ color: 'var(--white)' }} data-animate="fadeInUp">
             FREQUENTLY ASKED
             <br />
             <span style={{ color: 'var(--gold)' }}>QUESTIONS</span>

@@ -36,7 +36,7 @@ export default function ContactPage() {
     <>
       {/* ── Hero ── */}
       <section className="about-hero" style={{ background: 'var(--green)' }}>
-        <div className="about-hero-copy">
+        <div className="about-hero-copy" data-stagger="fadeInUp">
           <p className="eyebrow" style={{ color: 'var(--gold)' }}>Get in touch</p>
           <h1 className="display" style={{ color: 'var(--white)' }}>
             VISIT
@@ -75,11 +75,11 @@ export default function ContactPage() {
       {/* ── Branch info ── */}
       <section className="contact-branches">
         <div className="container">
-          <p className="eyebrow">Our location</p>
-          <h2 className="display" style={{ marginBottom: 12 }}>
+          <p className="eyebrow" data-animate="fadeInUp">Our location</p>
+          <h2 className="display" style={{ marginBottom: 12 }} data-animate="fadeInUp">
             FIND <span className="accent">US</span>
           </h2>
-          <div className="branch-grid">
+          <div className="branch-grid" data-stagger="fadeInUp">
             <div className="branch-card">
               <i className="fa-solid fa-location-dot" style={{ color: 'var(--gold)', fontSize: 28 }} />
               <h3>IRRONPRIT Fitness</h3>
@@ -115,7 +115,7 @@ export default function ContactPage() {
             </div>
 
             {/* Quick info cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} data-stagger="zoomIn">
               {[
                 { icon: 'fa-solid fa-clock', title: 'Weekdays', sub: 'Mon - Sat', time: '9:00 am - 8:00 pm' },
                 { icon: 'fa-solid fa-sun', title: 'Sunday', sub: 'Open hours', time: '10:00 am - 2:00 pm' },
@@ -147,11 +147,11 @@ export default function ContactPage() {
       {/* ── Map ── */}
       <section className="contact-map" style={{ paddingTop: 0 }}>
         <div className="container">
-          <p className="eyebrow">Get directions</p>
-          <h2 className="display" style={{ marginBottom: 12 }}>
+          <p className="eyebrow" data-animate="fadeInUp">Get directions</p>
+          <h2 className="display" style={{ marginBottom: 12 }} data-animate="fadeInUp">
             WE&apos;RE ON THE <span className="accent">MAP</span>
           </h2>
-          <div className="map-frame">
+          <div className="map-frame" data-animate="fadeInUp">
             <iframe
               src="https://maps.google.com/maps?q=22.382185,88.419228&z=17&output=embed"
               allowFullScreen
@@ -160,7 +160,7 @@ export default function ContactPage() {
               title="IRRONPRIT Fitness location"
             />
           </div>
-          <div className="contact-map-actions">
+          <div className="contact-map-actions" data-animate="fadeInUp">
             <a
               href="https://maps.google.com/?q=22.382185,88.419228"
               target="_blank"
@@ -183,7 +183,7 @@ export default function ContactPage() {
 
       {/* ── CTA ── */}
       <section className="about-cta">
-        <div className="container">
+        <div className="container" data-stagger="fadeInUp">
           <p className="eyebrow">Your journey starts here</p>
           <h2 className="display">
             Are you ready
