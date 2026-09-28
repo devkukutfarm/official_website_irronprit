@@ -50,7 +50,7 @@ const certs = [
     height: 440,
   },
   {
-    src: '/images/certification_3.jpg',
+    src: '/images/certification_3_new.jpg',
     title: 'Diploma in Sports, Fitness and Personal Training',
     issuer: '3rd Rank of OW',
     width: 600,

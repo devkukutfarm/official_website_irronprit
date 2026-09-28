@@ -1192,3 +1192,117 @@ html.js-reveal [data-stagger] > :not([data-revealed]) { opacity: 0; }
   .trainer-card:not(.trainer-soon) { transform: none; }
   .trainer-card:not(.trainer-soon):hover { scale: 1; }
 }
+
+/* ── HorizonX / Jiro-inspired effects (markup untouched) ──
+   Vars (--expand, --mag-*, --spot-*, --grid-*) come from MotionExtras.tsx. */
+
+/* Scroll Expand: frames open from an inset rounded card to full width */
+.has-scroll-expand .push {
+  --expand-inset: 5vw;
+  clip-path: inset(
+    calc((1 - var(--expand, 1)) * 28px)
+    calc((1 - var(--expand, 1)) * var(--expand-inset))
+    round calc((1 - var(--expand, 1)) * 36px)
+  );
+}
+.has-scroll-expand .video-frame { scale: calc(0.9 + 0.1 * var(--expand, 1)); }
+@media (max-width: 640px) { .has-scroll-expand .push { --expand-inset: 16px; } }
+
+/* Magnet: CTAs lean toward the approaching cursor */
+.hero .actions .btn, .header-actions .btn, .push .actions .btn,
+.mid-cta .actions .btn, .whatsapp-float {
+  transform: translate(var(--mag-x, 0px), var(--mag-y, 0px));
+}
+.whatsapp-float { transition: transform 0.25s ease-out; }
+
+/* Spot Fill: dark/outline buttons fill from where the cursor enters,
+   ending in exactly the same hover colours as before */
+.btn-dark { --spot-fill: var(--ink); }
+.btn-ghost { --spot-fill: var(--white); }
+.about-cta .btn-ghost { --spot-fill: var(--ink); }
+.contact-map-actions .btn-ghost { --spot-fill: var(--green); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-dark::before, .btn-ghost::before {
+    top: var(--spot-y, 50%); left: var(--spot-x, 50%); bottom: auto;
+    width: 0; height: auto; aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--spot-fill);
+    transform: none;
+    translate: -50% -50%;
+    transition: width 0.45s var(--ease-out-expo);
+  }
+  .btn-dark:hover::before, .btn-ghost:hover::before {
+    width: 250%;
+    translate: -50% -50%;
+    transition: width 0.6s var(--ease-out-expo);
+  }
+  .btn-dark:hover { background: var(--green); }
+  .btn-ghost:hover,
+  .about-cta .btn-ghost:hover,
+  .contact-map-actions .btn-ghost:hover { background: transparent; }
+  .btn-ghost { transition: color 0.3s ease 0.08s, border-color 0.2s ease, translate 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+}
+
+/* Light Rays: soft gold stage light over dark page heroes */
+.about-hero:not(.hero-banner) { position: relative; isolation: isolate; }
+.about-hero:not(.hero-banner)::before {
+  content: "";
+  position: absolute; left: -10%; right: -10%; top: -10%; height: 95%;
+  pointer-events: none;
+  z-index: -1;
+  background: repeating-conic-gradient(from 150deg at 36% -6%,
+    rgba(244,184,60,.10) 0deg 3deg, transparent 3deg 12deg);
+  -webkit-mask-image: radial-gradient(ellipse 55% 85% at 36% 0%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(ellipse 55% 85% at 36% 0%, #000 0%, transparent 72%);
+  filter: blur(6px);
+  transform-origin: 36% 0;
+  animation: rays-sway 14s ease-in-out infinite alternate;
+}
+@keyframes rays-sway {
+  from { rotate: -3deg; opacity: 0.7; }
+  to { rotate: 3deg; opacity: 1; }
+}
+
+/* Cursor Grid: a gold lattice lit only under the cursor on dark sections */
+.reviews, .faq { position: relative; isolation: isolate; }
+.reviews::before, .faq::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(244,184,60,.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244,184,60,.28) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(240px circle at var(--grid-x, 50%) var(--grid-y, 50%), #000, transparent 72%);
+  mask-image: radial-gradient(240px circle at var(--grid-x, 50%) var(--grid-y, 50%), #000, transparent 72%);
+  opacity: var(--grid-on, 0);
+  transition: opacity 0.45s ease;
+}
+
+/* Metal Bezel: brushed-gold sheen sweeping the featured plan's border */
+.price-card.featured::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(115deg,
+    rgba(244,184,60,.35) 0%, rgba(244,184,60,.35) 38%,
+    #fff6d8 47%, #f4b83c 53%,
+    rgba(244,184,60,.35) 62%, rgba(244,184,60,.35) 100%);
+  background-size: 250% 100%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: metal-sheen 4.8s ease-in-out infinite;
+}
+@keyframes metal-sheen {
+  0% { background-position: 110% 0; }
+  55%, 100% { background-position: -10% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-hero:not(.hero-banner)::before, .price-card.featured::before { animation: none; }
+}
