@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer'
 import WhatsAppFloat from '@/components/layout/WhatsAppFloat'
 import BackToTop from '@/components/layout/BackToTop'
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import InteractiveEffects from '@/components/ui/InteractiveEffects'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -168,6 +169,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <WhatsAppFloat />
         <BackToTop />
         <ScrollReveal />
+        <InteractiveEffects />
       </body>
     </html>
   )

@@ -1091,3 +1091,104 @@ html.js-reveal [data-stagger] > :not([data-revealed]) { opacity: 0; }
   .btn:hover, .price-card:hover { translate: none; }
   .class-card:hover img { scale: 1; }
 }
+
+/* ── Aceternity-inspired effects (brand-tuned, markup untouched) ── */
+
+/* Glowing Effect: a gold light traces the card border toward the cursor.
+   --glow-start / --glow-active are fed by InteractiveEffects.tsx. */
+.price-card, .class-price-card, .why-grid article, .teaser-grid a, .branch-card { position: relative; }
+.price-card::after, .class-price-card::after, .offer-box::after,
+.why-grid article::after, .teaser-grid a::after, .branch-card::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  padding: 2.5px;
+  pointer-events: none;
+  background: conic-gradient(
+    from calc((var(--glow-start, 0) - 60) * 1deg),
+    transparent 0deg,
+    #f4b83c 18deg,
+    #ffd36b 42deg,
+    #e8a317 64deg,
+    var(--red) 96deg,
+    transparent 120deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: var(--glow-active, 0);
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+.price-card:hover, .class-price-card:hover, .offer-box:hover, .branch-card:hover {
+  box-shadow: 0 26px 60px rgba(5,42,33,.16), 0 0 0 1px rgba(244,184,60,.25), 0 12px 40px rgba(244,184,60,.18);
+}
+
+/* Focus Cards: hovering one class card softly blurs its siblings */
+@media (hover: hover) and (pointer: fine) {
+  .class-card { transition: filter 0.35s ease, scale 0.35s ease, opacity 0.35s ease; }
+  .class-track:has(> .class-card:hover) > .class-card:not(:hover),
+  .classes-grid:has(> .class-card:hover) > .class-card:not(:hover) {
+    filter: blur(3px) saturate(0.75);
+    scale: 0.98;
+    opacity: 0.85;
+  }
+}
+
+/* Moving Border: a light travels around the primary hero CTA */
+@property --mb-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.hero .actions .btn:not(.btn-dark)::after {
+  content: "";
+  position: absolute; inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--mb-angle),
+    transparent 0 64%,
+    rgba(224,50,63,.0) 64%,
+    var(--red) 84%,
+    #fff 94%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: mb-spin 3.2s linear infinite;
+}
+@keyframes mb-spin { to { --mb-angle: 360deg; } }
+
+/* Comet Card: 3D tilt + glare on trainer cards (vars from InteractiveEffects.tsx) */
+@media (hover: hover) and (pointer: fine) {
+  .trainer-card:not(.trainer-soon) {
+    transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition: box-shadow 0.35s ease, scale 0.35s var(--ease-out-expo);
+  }
+  .trainer-card:not(.trainer-soon):hover {
+    scale: 1.03;
+    box-shadow: 0 30px 60px rgba(5,42,33,.28), 0 10px 22px rgba(5,42,33,.18);
+  }
+  .trainer-card:not(.trainer-soon)::before {
+    content: "";
+    position: absolute; inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 2;
+    background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255,255,255,.75) 8%, rgba(255,255,255,.35) 24%, rgba(255,255,255,0) 70%);
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .trainer-card:not(.trainer-soon):hover::before { opacity: 0.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .actions .btn:not(.btn-dark)::after { animation: none; opacity: 0; }
+  .trainer-card:not(.trainer-soon) { transform: none; }
+  .trainer-card:not(.trainer-soon):hover { scale: 1; }
+}
